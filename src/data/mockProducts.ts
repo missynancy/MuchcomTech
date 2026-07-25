@@ -7,7 +7,7 @@ export const mockCategories: Category[] = [
     slug: 'smartphones',
     iconName: 'Smartphone',
     itemCount: 12,
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=60&fm=webp',
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=150&q=60&fm=webp',
   },
   {
     id: 'cat-2',
@@ -15,7 +15,7 @@ export const mockCategories: Category[] = [
     slug: 'laptops',
     iconName: 'Laptop',
     itemCount: 18,
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=60&fm=webp',
+    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=150&q=60&fm=webp',
   },
   {
     id: 'cat-3',
@@ -23,7 +23,7 @@ export const mockCategories: Category[] = [
     slug: 'audio',
     iconName: 'Headphones',
     itemCount: 15,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=60&fm=webp',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=60&fm=webp',
   },
   {
     id: 'cat-4',
@@ -31,7 +31,7 @@ export const mockCategories: Category[] = [
     slug: 'wearables',
     iconName: 'Watch',
     itemCount: 9,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=60&fm=webp',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=150&q=60&fm=webp',
   },
   {
     id: 'cat-5',
@@ -39,7 +39,7 @@ export const mockCategories: Category[] = [
     slug: 'gaming',
     iconName: 'Gamepad2',
     itemCount: 14,
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=60&fm=webp',
+    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=150&q=60&fm=webp',
   },
   {
     id: 'cat-6',
@@ -47,7 +47,7 @@ export const mockCategories: Category[] = [
     slug: 'cameras',
     iconName: 'Camera',
     itemCount: 8,
-    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=60&fm=webp',
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=150&q=60&fm=webp',
   },
 ];
 
