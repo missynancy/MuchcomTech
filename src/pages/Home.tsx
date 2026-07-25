@@ -92,7 +92,7 @@ export const Home: React.FC = () => {
                 <div className="glass-panel p-3 rounded-3xl border border-cyan-500/30 shadow-glow-cyan">
                   <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900">
                     <img
-                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=80"
+                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=60&fm=webp"
                       alt="Apex Pro Headphone"
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                     />
