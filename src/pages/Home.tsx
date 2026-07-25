@@ -147,7 +147,7 @@ export const Home: React.FC = () => {
               <h3 className="text-xs sm:text-sm font-bold text-slate-200 group-hover:text-cyan-300 transition-colors line-clamp-1">
                 {cat.name}
               </h3>
-              <span className="text-[11px] text-slate-500 mt-1 font-medium">{cat.itemCount} items</span>
+              <span className="text-[11px] text-slate-400 mt-1 font-medium">{cat.itemCount} items</span>
             </Link>
           ))}
         </div>
@@ -208,7 +208,7 @@ export const Home: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">David Miller</h4>
-                  <span className="text-xs text-slate-500">Verified Buyer — NYC</span>
+                  <span className="text-xs text-slate-400">Verified Buyer — NYC</span>
                 </div>
               </div>
             </div>
@@ -228,7 +228,7 @@ export const Home: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Sarah Jenkins</h4>
-                  <span className="text-xs text-slate-500">Audio Engineer</span>
+                  <span className="text-xs text-slate-400">Audio Engineer</span>
                 </div>
               </div>
             </div>
@@ -248,7 +248,7 @@ export const Home: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Michael Chen</h4>
-                  <span className="text-xs text-slate-500">Software Architect</span>
+                  <span className="text-xs text-slate-400">Software Architect</span>
                 </div>
               </div>
             </div>
