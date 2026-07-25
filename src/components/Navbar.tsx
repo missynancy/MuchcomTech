@@ -98,19 +98,21 @@ export const Navbar: React.FC = () => {
           {/* Right Action Icons */}
           <div className="flex items-center space-x-3 sm:space-x-4">
             <Link
-              to="/shop"
-              className="p-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-lg transition-colors"
-              title="Search Catalog"
-            >
+  to="/shop"
+  aria-label="Search catalog"
+  className="p-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-lg transition-colors"
+  title="Search Catalog"
+>
               <Search className="w-5 h-5" />
             </Link>
 
             <Link
-              to="/cart"
-              className="relative p-2 text-slate-200 hover:text-cyan-400 bg-slate-800/70 border border-slate-700/80 rounded-xl transition-all hover:border-cyan-500/40 flex items-center gap-2 group"
-            >
-              <ShoppingBag className="w-5 h-5 transition-transform group-hover:scale-110" />
-              <span className="hidden sm:inline text-xs font-semibold">Cart</span>
+  to="/cart"
+  aria-label="View cart"
+  className="relative p-2 text-slate-200 hover:text-cyan-400 bg-slate-800/70 border border-slate-700/80 rounded-xl transition-all hover:border-cyan-500/40 flex items-center gap-2 group"
+>
+  <ShoppingBag className="w-5 h-5 transition-transform group-hover:scale-110" />
+  <span className="hidden sm:inline text-xs font-semibold">Cart</span>
               {cartCount > 0 && (
                 <span className="inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-slate-950 bg-cyan-400 rounded-full shadow-glow-cyan">
                   {cartCount}

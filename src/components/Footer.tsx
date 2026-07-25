@@ -71,11 +71,12 @@ export const Footer: React.FC = () => {
                   className="bg-slate-900 border border-slate-800 rounded-lg px-3.5 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 flex-1"
                 />
                 <button
-                  type="submit"
-                  className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-1 shadow-glow-cyan"
-                >
-                  <Send className="w-4 h-4" />
-                </button>
+  type="submit"
+  aria-label="Subscribe to newsletter"
+  className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-1 shadow-glow-cyan"
+>
+  <Send className="w-4 h-4" />
+</button>
               </form>
             </div>
           </div>
@@ -110,7 +111,7 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-slate-400 mb-2">Need quick order assistance?</p>
             <div className="space-y-2 text-xs">
               <p className="flex items-center gap-2 text-slate-300">
-                <span className="font-semibold text-cyan-400">WhatsApp:</span> +1 555-019-2834
+                <span className="font-semibold text-cyan-400">WhatsApp:</span> +254 791 618 090
               </p>
               <p className="flex items-center gap-2 text-slate-300">
                 <span className="font-semibold text-cyan-400">Email:</span> support@electromart.dev
