@@ -7,7 +7,7 @@ export const mockCategories: Category[] = [
     slug: 'smartphones',
     iconName: 'Smartphone',
     itemCount: 12,
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=60&fm=webp',
   },
   {
     id: 'cat-2',
@@ -15,7 +15,7 @@ export const mockCategories: Category[] = [
     slug: 'laptops',
     iconName: 'Laptop',
     itemCount: 18,
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=60&fm=webp',
   },
   {
     id: 'cat-3',
@@ -23,7 +23,7 @@ export const mockCategories: Category[] = [
     slug: 'audio',
     iconName: 'Headphones',
     itemCount: 15,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=60&fm=webp',
   },
   {
     id: 'cat-4',
@@ -31,7 +31,7 @@ export const mockCategories: Category[] = [
     slug: 'wearables',
     iconName: 'Watch',
     itemCount: 9,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=60&fm=webp',
   },
   {
     id: 'cat-5',
@@ -39,7 +39,7 @@ export const mockCategories: Category[] = [
     slug: 'gaming',
     iconName: 'Gamepad2',
     itemCount: 14,
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=60&fm=webp',
   },
   {
     id: 'cat-6',
@@ -47,7 +47,7 @@ export const mockCategories: Category[] = [
     slug: 'cameras',
     iconName: 'Camera',
     itemCount: 8,
-    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=60&fm=webp',
   },
 ];
 
@@ -61,11 +61,11 @@ export const mockProducts: Product[] = [
     originalPrice: 349,
     rating: 4.9,
     reviewsCount: 142,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=60&fm=webp',
     images: [
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=60&fm=webp',
+      'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=60&fm=webp',
+      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=60&fm=webp'
     ],
     specs: [
       { name: 'Driver Size', value: '40mm Titanium Drivers' },
@@ -88,10 +88,10 @@ export const mockProducts: Product[] = [
     originalPrice: 2099,
     rating: 4.95,
     reviewsCount: 89,
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=60&fm=webp',
     images: [
-      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=60&fm=webp',
+      'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=60&fm=webp'
     ],
     specs: [
       { name: 'Processor', value: '12-Core NextGen Silicon' },
@@ -114,10 +114,10 @@ export const mockProducts: Product[] = [
     originalPrice: 1149,
     rating: 4.8,
     reviewsCount: 215,
-    image: 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=60&fm=webp',
     images: [
-      'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=60&fm=webp',
+      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=60&fm=webp'
     ],
     specs: [
       { name: 'Camera System', value: '200MP Main + 50MP Periscope 10x Zoom' },
@@ -140,10 +140,10 @@ export const mockProducts: Product[] = [
     originalPrice: 399,
     rating: 4.7,
     reviewsCount: 76,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=60&fm=webp',
     images: [
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=60&fm=webp',
+      'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=60&fm=webp'
     ],
     specs: [
       { name: 'Sensors', value: 'ECG, SpO2, Continuous Heart Rate, Body Temp' },
@@ -166,9 +166,9 @@ export const mockProducts: Product[] = [
     originalPrice: 899,
     rating: 4.9,
     reviewsCount: 164,
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=60&fm=webp',
     images: [
-      'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=60&fm=webp'
     ],
     specs: [
       { name: 'Panel Type', value: '27" QD-OLED Quad HD (2560x1440)' },
@@ -191,9 +191,9 @@ export const mockProducts: Product[] = [
     originalPrice: 1399,
     rating: 4.85,
     reviewsCount: 53,
-    image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=60&fm=webp',
     images: [
-      'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=60&fm=webp'
     ],
     specs: [
       { name: 'Camera', value: '4K/60fps HDR 1-inch CMOS Sensor' },
