@@ -3,7 +3,7 @@ import type { AppConfig } from '../types';
 export const defaultConfig: AppConfig = {
   storeName: 'Electromart',
   checkoutMode: 'whatsapp', // Swappable option: 'whatsapp' | 'email'
-  whatsappNumber: '+254791618090',
+  whatsappNumber: '+254720683623',
   emailEndpoint: 'https://api.web3forms.com/submit', // Example form-to-email endpoint
   currencySymbol: '$',
   currencyCode: 'USD',
