@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-slate-400 mb-2">Need quick order assistance?</p>
             <div className="space-y-2 text-xs">
               <p className="flex items-center gap-2 text-slate-300">
-                <span className="font-semibold text-cyan-400">WhatsApp:</span> +254 720 683 623
+                <span className="font-semibold text-cyan-400">WhatsApp:</span> +254 725 260 133
               </p>
               <p className="flex items-center gap-2 text-slate-300">
                 <span className="font-semibold text-cyan-400">Email:</span> support@electromart.dev
