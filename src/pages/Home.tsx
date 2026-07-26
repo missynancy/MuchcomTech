@@ -54,7 +54,7 @@ export const Home: React.FC = () => {
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <Link
                   to="/shop"
-                  className="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-500 hover:bg-green-400, text-slate-950 shadow-glow-green font-extrabold text-base transition-all duration-200 flex items-center justify-center gap-2 group"
+                  className="w-full sm:w-auto px-8 py-4 rounded-xl bg-green-500 hover:bg-green-400, text-slate-950 shadow-glow-green font-extrabold text-base transition-all duration-200 flex items-center justify-center gap-2 group"
                 >
                   <span>Explore Shop Catalog</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
