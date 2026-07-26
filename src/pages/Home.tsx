@@ -103,7 +103,7 @@ export const Home: React.FC = () => {
                           <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400">Featured Spotlight</span>
                           <h3 className="text-sm font-bold text-white">Apex Pro ANC Headphones</h3>
                         </div>
-                        <span className="text-sm font-extrabold text-red-300">$299.00</span>
+                        <span className="text-sm font-extrabold text-red-600">$299.00</span>
                       </div>
                     </div>
                   </div>

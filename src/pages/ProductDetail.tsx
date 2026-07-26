@@ -85,7 +85,7 @@ export const ProductDetail: React.FC = () => {
       <div>
         <Link
           to="/shop"
-          className="inline-flex items-center space-x-2 text-xs font-bold text-slate-400 hover:text-cyan-400 transition-colors"
+          className="inline-flex items-center space-x-2 text-xs font-bold text-slate-400 hover:text-green-400 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Catalog</span>
@@ -103,7 +103,7 @@ export const ProductDetail: React.FC = () => {
               className="w-full h-full object-cover rounded-2xl transition-all duration-300"
             />
             {discountPercent > 0 && (
-              <span className="absolute top-6 left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-lg">
+              <span className="absolute top-6 left-6 bg-red-600 from-purple-600 to-pink-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-lg">
                 -{discountPercent}% OFF
               </span>
             )}
@@ -117,7 +117,7 @@ export const ProductDetail: React.FC = () => {
                   key={idx}
                   onClick={() => setSelectedImage(imgUrl)}
                   className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all p-1 bg-slate-900 shrink-0 ${
-                    selectedImage === imgUrl ? 'border-cyan-400 shadow-glow-cyan' : 'border-slate-800 opacity-60 hover:opacity-100'
+                    selectedImage === imgUrl ? 'border-blue-400 shadow-glow-blue' : 'border-slate-800 opacity-60 hover:opacity-100'
                   }`}
                 >
                   <img src={imgUrl} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover rounded-lg" />
@@ -130,7 +130,7 @@ export const ProductDetail: React.FC = () => {
         {/* Right Info Column */}
         <div className="lg:col-span-6 space-y-6">
           <div>
-            <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">
+            <span className="text-xs font-bold text-blue-500 uppercase tracking-widest">
               {product.category}
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white mt-1 leading-tight">
@@ -147,7 +147,7 @@ export const ProductDetail: React.FC = () => {
                 <span className="text-xs text-slate-400">({product.reviewsCount} reviews)</span>
               </div>
               <span className="text-slate-700">|</span>
-              <span className="inline-flex items-center text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+              <span className="inline-flex items-center text-xs font-bold text-green-400 bg-green-500/10 px-2.5 py-0.5 rounded-full border border-green-500/20">
                 In Stock & Ready to Ship
               </span>
             </div>
@@ -209,7 +209,7 @@ export const ProductDetail: React.FC = () => {
                 onClick={() => addToCart(product, quantity)}
                 className={`py-3.5 px-6 rounded-xl text-sm font-extrabold transition-all flex items-center justify-center gap-2 ${
                   isInCart
-                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                    ? 'bg-green-500/20 text-green-300 border border-green-500/40'
                     : 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-glow-cyan'
                 }`}
               >
@@ -230,11 +230,11 @@ export const ProductDetail: React.FC = () => {
           {/* Guarantees Callout */}
           <div className="grid grid-cols-2 gap-4 pt-4 text-xs text-slate-400">
             <div className="flex items-center space-x-2">
-              <ShieldCheck className="w-4 h-4 text-cyan-400 shrink-0" />
+              <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
               <span>2-Year Official Warranty</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Truck className="w-4 h-4 text-cyan-400 shrink-0" />
+              <Truck className="w-4 h-4 text-blue-400 shrink-0" />
               <span>Free Express Delivery</span>
             </div>
           </div>
