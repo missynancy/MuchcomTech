@@ -29,14 +29,14 @@ export const Home: React.FC = () => {
       {/* Hero Banner Section */}
       <section className="relative overflow-hidden pt-8 pb-16 md:py-20 lg:py-24">
         {/* Background Ambient Glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/3 right-10 w-[400px] h-[250px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/3 right-10 w-[400px] h-[250px]  rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Hero Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-green-500/10 border-green-500/30 text-green-300 text-xs font-bold uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
                 <span>Next-Gen Tech Arrival 2026</span>
               </div>
@@ -54,7 +54,7 @@ export const Home: React.FC = () => {
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <Link
                   to="/shop"
-                  className="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-base transition-all duration-200 shadow-glow-cyan flex items-center justify-center gap-2 group"
+                  className="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-500 hover:bg-green-400, text-slate-950 shadow-glow-green font-extrabold text-base transition-all duration-200 flex items-center justify-center gap-2 group"
                 >
                   <span>Explore Shop Catalog</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -62,7 +62,7 @@ export const Home: React.FC = () => {
 
                 <Link
                   to="/shop?cat=smartphones"
-                  className="w-full sm:w-auto px-7 py-4 rounded-xl glass-panel text-slate-200 hover:text-white font-bold text-base hover:border-cyan-500/40 transition-all flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-7 py-4 rounded-xl glass-panel text-slate-200 hover:text-green-400 font-bold text-base hover:border-green-500/40 transition-all flex items-center justify-center gap-2"
                 >
                   <Cpu className="w-5 h-5 text-cyan-400" />
                   <span>Flagship Deals</span>
@@ -89,7 +89,7 @@ export const Home: React.FC = () => {
             {/* Hero Right Visual Highlight */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                <div className="glass-panel p-3 rounded-3xl border border-cyan-500/30 shadow-glow-cyan">
+                <div className="glass-panel p-3 rounded-3xl border border-blue-500/30 shadow-glow-blue">
                   <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900">
                     <img
                       src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=60&fm=webp"
@@ -100,10 +100,10 @@ export const Home: React.FC = () => {
                     <div className="absolute bottom-4 left-4 right-4 p-4 glass-panel rounded-xl border border-white/10">
                       <div className="flex items-center justify-between">
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-400">Featured Spotlight</span>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400">Featured Spotlight</span>
                           <h3 className="text-sm font-bold text-white">Apex Pro ANC Headphones</h3>
                         </div>
-                        <span className="text-sm font-extrabold text-cyan-300">$299.00</span>
+                        <span className="text-sm font-extrabold text-red-300">$299.00</span>
                       </div>
                     </div>
                   </div>
@@ -118,12 +118,12 @@ export const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
           <div>
-            <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">Explore Categories</span>
+            <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Explore Categories</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">Shop by Hardware Type</h2>
           </div>
           <Link
             to="/shop"
-            className="mt-3 sm:mt-0 text-sm font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 group"
+            className="mt-3 sm:mt-0 text-sm font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1 group"
           >
             <span>View All Categories</span>
             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -135,7 +135,7 @@ export const Home: React.FC = () => {
             <Link
               key={cat.id}
               to={`/shop?cat=${cat.slug}`}
-              className="group glass-card p-4 rounded-2xl border border-slate-800 hover:border-cyan-500/40 hover:-translate-y-1.5 transition-all text-center flex flex-col items-center justify-between"
+              className="group glass-card p-4 rounded-2xl border border-slate-800 hover:border-blue-500/40 hover:-translate-y-1.5 transition-all text-center flex flex-col items-center justify-between"
             >
               <div className="w-16 h-16 rounded-2xl overflow-hidden mb-3 bg-slate-900 p-1">
                 <img
@@ -144,7 +144,7 @@ export const Home: React.FC = () => {
                   className="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xs sm:text-sm font-bold text-slate-200 group-hover:text-cyan-300 transition-colors line-clamp-1">
+              <h3 className="text-xs sm:text-sm font-bold text-slate-200 group-hover:text-blue-300 transition-colors line-clamp-1">
                 {cat.name}
               </h3>
               <span className="text-[11px] text-slate-400 mt-1 font-medium">{cat.itemCount} items</span>
@@ -157,12 +157,12 @@ export const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
           <div>
-            <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">Curated Collection</span>
+            <span className="text-xs font-bold text-green-400 uppercase tracking-widest">Curated Collection</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">Featured Flagship Gadgets</h2>
           </div>
           <Link
             to="/shop"
-            className="mt-3 sm:mt-0 text-sm font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 group"
+            className="mt-3 sm:mt-0 text-sm font-bold text-green-400 hover:text-green-300 flex items-center gap-1 group"
           >
             <span>Browse Full Catalog</span>
             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -188,7 +188,7 @@ export const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="glass-panel rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">Customer Reviews</span>
+            <span className="text-xs font-bold text-green-400 uppercase tracking-widest">Customer Reviews</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">Loved By Tech Enthusiasts</h2>
           </div>
 
