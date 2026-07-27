@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, ArrowLeft, Send, PhoneCall, Mail, ShieldCheck, CheckCircle2, AlertCircle } from 'lucide-react';
 import { useCart } from '../context/CartContext';
@@ -55,6 +55,7 @@ export const Cart: React.FC = () => {
       openWhatsAppCheckout(cartItems, customerDetails, config, grandTotal);
       setSubmitting(false);
       showToast('Opening WhatsApp with your compiled order summary!');
+      clearCart();
     } else {
       // Option B: Form-to-email endpoint submission
       const result = await sendFormToEmailOrder(cartItems, customerDetails, config, grandTotal);
@@ -347,3 +348,6 @@ export const Cart: React.FC = () => {
     </div>
   );
 };
+
+
+

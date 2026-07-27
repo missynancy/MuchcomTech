@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+﻿import React, { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import type { Product, CartItem, CustomerDetails, AppConfig, CheckoutMode } from '../types';
 import { getAppConfig, saveAppConfig } from '../config/appConfig';
 
@@ -165,3 +165,4 @@ export const useCart = () => {
   }
   return context;
 };
+
