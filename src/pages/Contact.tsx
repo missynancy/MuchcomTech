@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Mail, PhoneCall, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
@@ -12,11 +12,29 @@ export const Contact: React.FC = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
-    setSubmitted(true);
-    showToast('Your message has been sent to muchcomtech Support!');
+    setSending(true);
+    try {
+      const response = await fetch('https://formspree.io/f/xeeyvbzl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        showToast('Your message has been sent to muchcomtech Support!');
+      } else {
+        showToast('Something went wrong sending your message. Please try again.');
+      }
+    } catch (error) {
+      showToast('Failed to send message. Please check your connection.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -79,8 +97,8 @@ export const Contact: React.FC = () => {
             </div>
             <div>
               <h4 className="text-sm font-bold text-white">Working Hours</h4>
-              <p className="text-xs text-slate-300 mt-1">Monday – Friday: 9:00 AM – 8:00 PM EST</p>
-              <p className="text-xs text-slate-400 mt-0.5">Saturday: 10:00 AM – 6:00 PM EST</p>
+              <p className="text-xs text-slate-300 mt-1">Monday â€“ Friday: 9:00 AM â€“ 8:00 PM EST</p>
+              <p className="text-xs text-slate-400 mt-0.5">Saturday: 10:00 AM â€“ 6:00 PM EST</p>
             </div>
           </div>
         </div>
@@ -156,10 +174,11 @@ export const Contact: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-red-500 hover:bg-red-400 text-slate-950 font-extrabold text-sm rounded-xl transition-all shadow-glow-red flex items-center justify-center gap-2"
+                  disabled={sending}
+                  className="w-full py-3.5 bg-red-500 hover:bg-red-400 disabled:opacity-60 text-slate-950 font-extrabold text-sm rounded-xl transition-all shadow-glow-red flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Submit Message</span>
+                  <span>{sending ? 'Sending...' : 'Submit Message'}</span>
                 </button>
               </form>
             )}
@@ -169,3 +188,4 @@ export const Contact: React.FC = () => {
     </div>
   );
 };
+
