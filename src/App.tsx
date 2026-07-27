@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { ToastNotification } from './components/ToastNotification';
 
 import { Home } from './pages/Home';
+import { Services } from './pages/Services';
 import { Shop } from './pages/Shop';
 import { ProductDetail } from './pages/ProductDetail';
 import { Cart } from './pages/Cart';
@@ -22,6 +23,7 @@ export const App: React.FC = () => {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/cart" element={<Cart />} />
