@@ -1,8 +1,8 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Smartphone, Zap, PhoneCall, Send, CheckCircle2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
-const SAFARICOM_TILL = '000000';
+const SAFARICOM_TILL = '5509000';
 const AIRTEL_TILL = '000000'; // TODO: replace with real Airtel Till Number
 
 type UtilityType = 'electricity' | 'water' | 'other';

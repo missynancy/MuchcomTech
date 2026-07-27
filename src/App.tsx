@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ToastNotification } from './components/ToastNotification';
-
+import { SupportBar } from './components/SupportBar';
 import { Home } from './pages/Home';
 import { Services } from './pages/Services';
 import { Shop } from './pages/Shop';
@@ -33,6 +33,8 @@ export const App: React.FC = () => {
             </Routes>
           </main>
           <Footer />
+          <div className="h-14" />
+          <SupportBar />
           <ToastNotification />
         </div>
       </Router>
