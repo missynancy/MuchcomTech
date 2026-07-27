@@ -16,7 +16,7 @@ import { Contact } from './pages/Contact';
 export const App: React.FC = () => {
   return (
     <CartProvider>
-      <Router basename="/electro-Mart/">
+      <Router basename="/MuchcomTech/">
         <div className="flex flex-col min-h-screen bg-[#0B0F17] text-slate-100 selection:bg-blue-500 selection:text-slate-950 font-sans">
           <Navbar />
           <main className="flex-grow">
