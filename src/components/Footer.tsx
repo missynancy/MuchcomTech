@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
                 <Zap className="w-5 h-5 text-slate-950 stroke-[2.5]" />
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
-                ELECTRO<span className="text-cyan-400">MART</span>
+                MUCHCOM<span className="text-cyan-400">TECH</span>
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-slate-400 mb-2">Need quick order assistance?</p>
             <div className="space-y-2 text-xs">
               <p className="flex items-center gap-2 text-slate-300">
-                <span className="font-semibold text-cyan-400">WhatsApp:</span> +254 725 260 133
+                <span className="font-semibold text-cyan-400">WhatsApp:</span> +254 791 618 090
               </p>
               <p className="flex items-center gap-2 text-slate-300">
                 <span className="font-semibold text-cyan-400">Email:</span> support@electromart.dev
@@ -127,7 +127,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright line */}
         <div className="border-t border-slate-800/80 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} MuchcomT. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} MuchcomTech. All rights reserved.</p>
           <div className="flex space-x-4 mt-2 sm:mt-0">
             <Link to="/faq" className="hover:text-slate-400">Privacy Policy</Link>
             <Link to="/faq" className="hover:text-slate-400">Terms of Service</Link>
