@@ -1,4 +1,4 @@
-import type { AppConfig } from '../types';
+﻿import type { AppConfig } from '../types';
 
 export const defaultConfig: AppConfig = {
   storeName: 'muchcomtech',
@@ -6,7 +6,7 @@ export const defaultConfig: AppConfig = {
   whatsappNumber: '+254791618090', // Example WhatsApp number
   emailEndpoint: 'https://api.web3forms.com/submit', // Example form-to-email endpoint
   currencySymbol: '$',
-  currencyCode: 'USD',
+  currencyCode: 'KES',
   taxRate: 0.08,
   freeShippingThreshold: 150,
 };
@@ -36,3 +36,4 @@ export function saveAppConfig(newConfig: Partial<AppConfig>): AppConfig {
   }
   return updated;
 }
+
