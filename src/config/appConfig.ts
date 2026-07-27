@@ -2,16 +2,15 @@
 
 export const defaultConfig: AppConfig = {
   storeName: 'muchcomtech',
-  checkoutMode: 'whatsapp', // Swappable option: 'whatsapp' | 'email'
-  whatsappNumber: '+254791618090', // Example WhatsApp number
-  emailEndpoint: 'https://api.web3forms.com/submit', // Example form-to-email endpoint
-  currencySymbol: '$',
+  checkoutMode: 'whatsapp',
+  whatsappNumber: '+254791618090',
+  emailEndpoint: 'https://api.web3forms.com/submit',
+  currencySymbol: 'KSh ',
   currencyCode: 'KES',
   taxRate: 0.08,
   freeShippingThreshold: 150,
 };
 
-// Local storage key for dynamic user toggling during dev/demo
 const CONFIG_STORAGE_KEY = 'muchcomtech_app_config';
 
 export function getAppConfig(): AppConfig {
@@ -30,10 +29,9 @@ export function saveAppConfig(newConfig: Partial<AppConfig>): AppConfig {
   const current = getAppConfig();
   const updated = { ...current, ...newConfig };
   try {
-    localStorage.setItem(CONFIG_STORAGE_KEY, JSON.stringify(updated));
+    localStorage.setItem(CONFIG_STORAGE_KEY, JSON.stringify({ checkoutMode: updated.checkoutMode }));
   } catch (e) {
     console.error('Failed to save config to localStorage', e);
   }
   return updated;
 }
-
