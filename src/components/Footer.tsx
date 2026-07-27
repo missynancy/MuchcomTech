@@ -127,7 +127,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright line */}
         <div className="border-t border-slate-800/80 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Electromart. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} MuchcomT. All rights reserved.</p>
           <div className="flex space-x-4 mt-2 sm:mt-0">
             <Link to="/faq" className="hover:text-slate-400">Privacy Policy</Link>
             <Link to="/faq" className="hover:text-slate-400">Terms of Service</Link>
