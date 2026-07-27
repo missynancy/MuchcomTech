@@ -13,7 +13,7 @@ export function buildWhatsAppOrderMessage(
     year: 'numeric',
   });
 
-  let message = `🛒 *NEW ORDER FROM ELECTROMART*\n`;
+  let message = `🛒 *NEW ORDER FROM muchcomtech*\n`;
   message += `📅 Date: ${dateStr}\n`;
   message += `-----------------------------------\n\n`;
 

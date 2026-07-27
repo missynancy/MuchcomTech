@@ -27,11 +27,11 @@ export const CartItemRow: React.FC<CartItemProps> = ({ item }) => {
           />
         </Link>
         <div className="flex-1 min-w-0">
-          <span className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider">
+          <span className="text-[11px] font-bold text-blue-400 uppercase tracking-wider">
             {product.category}
           </span>
           <Link to={`/product/${product.id}`}>
-            <h4 className="text-sm sm:text-base font-bold text-white hover:text-cyan-300 transition-colors line-clamp-1">
+            <h4 className="text-sm sm:text-base font-bold text-white hover:text-blue-300 transition-colors line-clamp-1">
               {product.name}
             </h4>
           </Link>

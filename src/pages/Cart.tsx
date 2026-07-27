@@ -81,7 +81,7 @@ export const Cart: React.FC = () => {
         <div className="pt-4">
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-cyan-500 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-cyan"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-red-500 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-red"
           >
             Continue Shopping
           </Link>
@@ -96,7 +96,7 @@ export const Cart: React.FC = () => {
       <div className="flex items-center justify-between border-b border-slate-800 pb-6">
         <div>
           <h1 className="text-3xl font-extrabold text-white flex items-center gap-3">
-            <ShoppingBag className="w-8 h-8 text-cyan-400" />
+            <ShoppingBag className="w-8 h-8 text-blue-400" />
             <span>Shopping Cart</span>
           </h1>
           <p className="text-sm text-slate-400 mt-1">Review your items and complete order details.</p>
@@ -122,7 +122,7 @@ export const Cart: React.FC = () => {
           </div>
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-cyan transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-400 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-red transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Start Browsing Catalog
           </Link>
@@ -167,7 +167,7 @@ export const Cart: React.FC = () => {
                       placeholder="e.g. John Doe"
                       value={customerDetails.name}
                       onChange={handleInputChange}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>
                   <div>
@@ -179,7 +179,7 @@ export const Cart: React.FC = () => {
                       placeholder="e.g. +1 555 019 2834"
                       value={customerDetails.phone}
                       onChange={handleInputChange}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>
                 </div>
@@ -193,7 +193,7 @@ export const Cart: React.FC = () => {
                       placeholder="john@example.com"
                       value={customerDetails.email}
                       onChange={handleInputChange}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>
                   <div>
@@ -205,7 +205,7 @@ export const Cart: React.FC = () => {
                       placeholder="e.g. New York, NY"
                       value={customerDetails.city}
                       onChange={handleInputChange}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>
                 </div>
@@ -219,7 +219,7 @@ export const Cart: React.FC = () => {
                     placeholder="123 Innovation Way, Apt 4B"
                     value={customerDetails.address}
                     onChange={handleInputChange}
-                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                   />
                 </div>
 
@@ -231,7 +231,7 @@ export const Cart: React.FC = () => {
                     placeholder="Gate code, special delivery instructions..."
                     value={customerDetails.notes}
                     onChange={handleInputChange}
-                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500 resize-none"
+                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500 resize-none"
                   />
                 </div>
               </form>
@@ -266,7 +266,7 @@ export const Cart: React.FC = () => {
                     onClick={() => setCheckoutMode('email')}
                     className={`py-2.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 border ${
                       config.checkoutMode === 'email'
-                        ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50 shadow-sm'
+                        ? 'bg-blue-500/20 text-blue-300 border-blue-500/50 shadow-sm'
                         : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-white'
                     }`}
                   >
@@ -307,7 +307,7 @@ export const Cart: React.FC = () => {
                 </div>
                 <div className="flex justify-between text-base font-extrabold text-white pt-2 border-t border-slate-800">
                   <span>Total Amount</span>
-                  <span className="text-cyan-400">
+                  <span className="text-blue-400">
                     {formatCurrency(grandTotal, config.currencyCode, config.currencySymbol)}
                   </span>
                 </div>
@@ -320,8 +320,8 @@ export const Cart: React.FC = () => {
                 disabled={submitting}
                 className={`w-full py-4 rounded-xl font-extrabold text-base transition-all duration-200 flex items-center justify-center gap-2 ${
                   config.checkoutMode === 'whatsapp'
-                    ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-glow-cyan'
-                    : 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-glow-cyan'
+                    ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-glow-blue'
+                    : 'bg-red-500 hover:bg-red-400 text-slate-950 shadow-glow-red'
                 }`}
               >
                 {submitting ? (
@@ -337,7 +337,7 @@ export const Cart: React.FC = () => {
               </button>
 
               <div className="flex items-center justify-center space-x-2 text-[11px] text-slate-500 text-center">
-                <ShieldCheck className="w-4 h-4 text-cyan-400" />
+                <ShieldCheck className="w-4 h-4 text-blue-400" />
                 <span>Zero spam guarantee & instant order confirmation</span>
               </div>
             </div>

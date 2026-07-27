@@ -7,23 +7,23 @@ export const About: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
       {/* Brand Hero Story */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider">
-          <Zap className="w-3.5 h-3.5 text-cyan-400" />
-          <span>About Electromart</span>
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <Zap className="w-3.5 h-3.5 text-blue-400" />
+          <span>About muchcomtech</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
           Next-Generation Technology <br />
           <span className="text-gradient">Engineered For Performers</span>
         </h1>
         <p className="text-slate-300 text-base sm:text-lg leading-relaxed pt-2">
-          Founded in 2026, Electromart was built with a singular mission: eliminating friction in purchasing high-end consumer electronics, flagship smartphones, and professional audio gear.
+          Founded in 2026, muchcomtech was built with a singular mission: eliminating friction in purchasing high-end consumer electronics, flagship smartphones, and professional audio gear.
         </p>
       </div>
 
       {/* Grid Pillars */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="glass-panel p-8 rounded-3xl border border-slate-800 space-y-4 hover:border-cyan-500/40 transition-colors">
-          <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20">
+        <div className="glass-panel p-8 rounded-3xl border border-slate-800 space-y-4 hover:border-blue-500/40 transition-colors">
+          <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center border border-blue-500/20">
             <Cpu className="w-6 h-6" />
           </div>
           <h3 className="text-xl font-bold text-white">Direct-to-Consumer Speed</h3>
@@ -32,8 +32,8 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        <div className="glass-panel p-8 rounded-3xl border border-slate-800 space-y-4 hover:border-purple-500/40 transition-colors">
-          <div className="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center border border-purple-500/20">
+        <div className="glass-panel p-8 rounded-3xl border border-slate-800 space-y-4 hover:border-red-500/40 transition-colors">
+          <div className="w-12 h-12 rounded-2xl bg-red-500/10 text-red-400 flex items-center justify-center border border-red-500/20">
             <ShieldCheck className="w-6 h-6" />
           </div>
           <h3 className="text-xl font-bold text-white">Uncompromising Authenticity</h3>
@@ -57,7 +57,7 @@ export const About: React.FC = () => {
       <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800 bg-slate-900/50">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           <div>
-            <span className="text-4xl sm:text-5xl font-black text-cyan-400">12,500+</span>
+            <span className="text-4xl sm:text-5xl font-black text-blue-400">12,500+</span>
             <span className="block text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wider">Orders Fulfilled</span>
           </div>
           <div>
@@ -65,7 +65,7 @@ export const About: React.FC = () => {
             <span className="block text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wider">Customer Satisfaction</span>
           </div>
           <div>
-            <span className="text-4xl sm:text-5xl font-black text-purple-400">2-Year</span>
+            <span className="text-4xl sm:text-5xl font-black text-red-400">2-Year</span>
             <span className="block text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wider">Warranty Standard</span>
           </div>
           <div>
@@ -81,7 +81,7 @@ export const About: React.FC = () => {
         <div>
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-cyan transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-red-500 hover:bg-red-400 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-red transition-colors"
           >
             <span>Browse Full Catalog</span>
             <ArrowRight className="w-4 h-4" />

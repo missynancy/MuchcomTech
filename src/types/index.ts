@@ -50,7 +50,7 @@ export type CheckoutMode = 'whatsapp' | 'email';
 export interface AppConfig {
   storeName: string;
   checkoutMode: CheckoutMode;
-  whatsappNumber: string; // e.g. "15550192834"
+  whatsappNumber: string; // e.g. "254791618090"
   emailEndpoint: string;  // e.g. "https://formspree.io/f/sample"
   currencySymbol: string;
   currencyCode: string;

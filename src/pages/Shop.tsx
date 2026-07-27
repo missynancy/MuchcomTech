@@ -86,7 +86,7 @@ export const Shop: React.FC = () => {
             placeholder="Search gadgets, specs, brands..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-slate-900/90 border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
+            className="w-full bg-slate-900/90 border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
           />
         </div>
       </div>
@@ -97,12 +97,12 @@ export const Shop: React.FC = () => {
           <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-6 sticky top-24">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <SlidersHorizontal className="w-4 h-4 text-cyan-400" />
+                <SlidersHorizontal className="w-4 h-4 text-blue-400" />
                 <span>Filters</span>
               </h3>
               <button
                 onClick={handleResetFilters}
-                className="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors"
+                className="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1 transition-colors"
               >
                 <RotateCcw className="w-3 h-3" /> Reset
               </button>
@@ -118,7 +118,7 @@ export const Shop: React.FC = () => {
                   onClick={() => handleCategorySelect('all')}
                   className={`w-full text-left px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
                     selectedCategory === 'all'
-                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                      ? 'bg-blue-500/20 text-blue-300 border border-blue-500/40'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
                   }`}
                 >
@@ -130,7 +130,7 @@ export const Shop: React.FC = () => {
                     onClick={() => handleCategorySelect(cat.slug)}
                     className={`w-full text-left px-3 py-2 rounded-xl text-xs font-semibold transition-all flex items-center justify-between ${
                       selectedCategory === cat.slug
-                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                        ? 'bg-blue-500/20 text-blue-300 border border-blue-500/40'
                         : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
                     }`}
                   >
@@ -144,7 +144,7 @@ export const Shop: React.FC = () => {
             <div className="space-y-3 pt-4 border-t border-slate-800">
               <div className="flex justify-between items-center text-xs">
                 <label className="font-bold text-slate-300 uppercase tracking-wider">Max Price</label>
-                <span className="font-extrabold text-cyan-400">${maxPrice}</span>
+                <span className="font-extrabold text-blue-400">${maxPrice}</span>
               </div>
               <input
                 type="range"
@@ -153,7 +153,7 @@ export const Shop: React.FC = () => {
                 step="50"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
-                className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg cursor-pointer"
+                className="w-full accent-blue-400 bg-slate-800 h-1.5 rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-slate-500">
                 <span>$100</span>
@@ -169,7 +169,7 @@ export const Shop: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as FilterOptions['sortBy'])}
-                className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500"
+                className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
               >
                 <option value="featured">Featured / Highlighted</option>
                 <option value="price-asc">Price: Low to High</option>
@@ -186,7 +186,7 @@ export const Shop: React.FC = () => {
           <div className="flex items-center justify-between text-xs text-slate-400">
             <span>Showing <strong className="text-white">{products.length}</strong> items</span>
             {selectedCategory !== 'all' && (
-              <span className="bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full">
+              <span className="bg-blue-500/10 text-blue-300 border border-blue-500/20 px-2.5 py-1 rounded-full">
                 Category: <strong className="capitalize">{selectedCategory}</strong>
               </span>
             )}
@@ -207,7 +207,7 @@ export const Shop: React.FC = () => {
               </p>
               <button
                 onClick={handleResetFilters}
-                className="px-5 py-2.5 bg-cyan-500 text-slate-950 text-xs font-bold rounded-xl hover:bg-cyan-400 transition-colors shadow-glow-cyan"
+                className="px-5 py-2.5 bg-red-500 text-slate-950 text-xs font-bold rounded-xl hover:bg-red-400 transition-colors shadow-glow-red"
               >
                 Clear All Filters
               </button>

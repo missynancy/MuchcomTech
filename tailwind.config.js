@@ -38,8 +38,8 @@ export default {
         sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
       },
       boxShadow: {
-        'glow-cyan': '0 0 25px -5px rgba(0, 242, 254, 0.35)',
-        'glow-purple': '0 0 25px -5px rgba(147, 51, 234, 0.35)',
+        'glow-blue': '0 0 25px -5px rgba(29, 78, 216, 0.35)',
+        'glow-red': '0 0 25px -5px rgba(220, 38, 38, 0.35)',
         'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
       }
     },

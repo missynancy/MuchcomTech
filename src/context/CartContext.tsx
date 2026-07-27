@@ -18,8 +18,8 @@ interface CartContextType {
   showToast: (msg: string) => void;
 }
 
-const CART_STORAGE_KEY = 'electromart_cart_items';
-const CUSTOMER_STORAGE_KEY = 'electromart_customer_info';
+const CART_STORAGE_KEY = 'muchcomtech_cart_items';
+const CUSTOMER_STORAGE_KEY = 'muchcomtech_customer_info';
 
 const defaultCustomer: CustomerDetails = {
   name: '',

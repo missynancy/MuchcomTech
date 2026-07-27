@@ -13,8 +13,8 @@ export const FAQ: React.FC = () => {
   const faqs: FAQItem[] = [
     {
       category: 'Ordering & WhatsApp Flow',
-      question: 'How does WhatsApp Direct Checkout work on Electromart?',
-      answer: 'When you select WhatsApp checkout in your Cart and click "Send Order via WhatsApp", Electromart compiles your selected line items, delivery address, and total amount into a nicely formatted message and opens WhatsApp automatically via wa.me. You can directly confirm payment and delivery with our support agent.',
+      question: 'How does WhatsApp Direct Checkout work on muchcomtech?',
+      answer: 'When you select WhatsApp checkout in your Cart and click "Send Order via WhatsApp", muchcomtech compiles your selected line items, delivery address, and total amount into a nicely formatted message and opens WhatsApp automatically via wa.me. You can directly confirm payment and delivery with our support agent.',
     },
     {
       category: 'Ordering & WhatsApp Flow',
@@ -24,7 +24,7 @@ export const FAQ: React.FC = () => {
     {
       category: 'Warranty & Genuine Products',
       question: 'Are all products authentic and covered by warranty?',
-      answer: 'Absolutely. Every laptop, smartphone, headphone, and gadget sold on Electromart is 100% genuine original brand stock and comes with a 2-year official hardware warranty.',
+      answer: 'Absolutely. Every laptop, smartphone, headphone, and gadget sold on muchcomtech is 100% genuine original brand stock and comes with a 2-year official hardware warranty.',
     },
     {
       category: 'Shipping & Delivery',
@@ -51,8 +51,8 @@ export const FAQ: React.FC = () => {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
       {/* Header */}
       <div className="text-center space-y-3">
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider">
-          <HelpCircle className="w-3.5 h-3.5 text-cyan-400" />
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <HelpCircle className="w-3.5 h-3.5 text-blue-400" />
           <span>Support & Guidance</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">Frequently Asked Questions</h1>
@@ -69,7 +69,7 @@ export const FAQ: React.FC = () => {
             <div
               key={index}
               className={`glass-panel rounded-2xl border transition-all ${
-                isOpen ? 'border-cyan-500/40 bg-slate-900/80 shadow-glow-cyan-sm' : 'border-slate-800 hover:border-slate-700'
+                isOpen ? 'border-blue-500/40 bg-slate-900/80 shadow-glow-blue-sm' : 'border-slate-800 hover:border-slate-700'
               }`}
             >
               <button
@@ -77,7 +77,7 @@ export const FAQ: React.FC = () => {
                 className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-white text-base"
               >
                 <div className="space-y-1">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-cyan-400 block">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-400 block">
                     {faq.category}
                   </span>
                   <span>{faq.question}</span>
@@ -104,10 +104,10 @@ export const FAQ: React.FC = () => {
           Can't find the answer you're looking for? Reach out directly to our support team on WhatsApp.
         </p>
         <a
-          href="https://wa.me/15550192834?text=Hi%20Electromart!%20I%20have%20a%20question%20about%20my%20order."
+          href="https://wa.me/254791618090?text=Hi%20muchcomtech!%20I%20have%20a%20question%20about%20my%20order."
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-cyan transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-blue transition-colors"
         >
           <PhoneCall className="w-4 h-4" />
           <span>Chat With Us on WhatsApp</span>

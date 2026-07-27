@@ -16,15 +16,15 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
     setSubmitted(true);
-    showToast('Your message has been sent to Electromart Support!');
+    showToast('Your message has been sent to muchcomtech Support!');
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       {/* Header */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider">
-          <Mail className="w-3.5 h-3.5 text-cyan-400" />
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <Mail className="w-3.5 h-3.5 text-blue-400" />
           <span>Get In Touch</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">We're Here to Help</h1>
@@ -50,20 +50,20 @@ export const Contact: React.FC = () => {
           </div>
 
           <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-start space-x-4">
-            <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shrink-0">
+            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 shrink-0">
               <Mail className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-sm font-bold text-white">Customer Support Email</h4>
               <p className="text-xs text-slate-400 mt-1">For general inquiries & invoices</p>
-              <a href="mailto:support@electromart.dev" className="text-sm font-extrabold text-cyan-400 hover:underline block mt-1">
-                support@electromart.dev
+              <a href="mailto:wambuinancy187@gmail.com" className="text-sm font-extrabold text-blue-400 hover:underline block mt-1">
+                wambuinancy187@gmail.com
               </a>
             </div>
           </div>
 
           <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex items-start space-x-4">
-            <div className="p-3 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 shrink-0">
+            <div className="p-3 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20 shrink-0">
               <MapPin className="w-6 h-6" />
             </div>
             <div>
@@ -99,7 +99,7 @@ export const Contact: React.FC = () => {
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="px-5 py-2.5 bg-slate-800 text-cyan-300 text-xs font-bold rounded-xl border border-slate-700 hover:bg-slate-700"
+                  className="px-5 py-2.5 bg-slate-800 text-blue-300 text-xs font-bold rounded-xl border border-slate-700 hover:bg-slate-700"
                 >
                   Send Another Message
                 </button>
@@ -115,7 +115,7 @@ export const Contact: React.FC = () => {
                       placeholder="e.g. Sarah Jenkins"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>
                   <div>
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
                       placeholder="sarah@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export const Contact: React.FC = () => {
                     placeholder="Product inquiry, warranty question..."
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"
                   />
                 </div>
 
@@ -150,13 +150,13 @@ export const Contact: React.FC = () => {
                     placeholder="How can we help you today?"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-500 resize-none"
+                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-sm rounded-xl transition-all shadow-glow-cyan flex items-center justify-center gap-2"
+                  className="w-full py-3.5 bg-red-500 hover:bg-red-400 text-slate-950 font-extrabold text-sm rounded-xl transition-all shadow-glow-red flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   <span>Submit Message</span>

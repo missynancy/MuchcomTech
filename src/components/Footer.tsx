@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
       <div className="border-b border-slate-800/60 bg-slate-900/40 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="flex items-start space-x-3.5">
-            <div className="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+            <div className="p-2.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
               <Truck className="w-6 h-6" />
             </div>
             <div>
@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
           <div className="flex items-start space-x-3.5">
-            <div className="p-2.5 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/20">
+            <div className="p-2.5 rounded-lg bg-red-500/10 text-red-400 border border-red-500/20">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
@@ -53,27 +53,27 @@ export const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center space-x-2.5">
-              <div className="p-2 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600">
+              <div className="p-2 rounded-xl bg-gradient-to-tr from-blue-500 to-blue-600">
                 <Zap className="w-5 h-5 text-slate-950 stroke-[2.5]" />
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
-                MUCHCOM<span className="text-cyan-400">TECH</span>
+                MUCHCOM<span className="text-blue-400">TECH</span>
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Electromart is your destination for next-generation consumer electronics, flagship smartphones, gaming hardware, and studio audio equipment.
+              muchcomtech is your destination for next-generation consumer electronics, flagship smartphones, gaming hardware, and studio audio equipment.
             </p>
             <div className="pt-2">
               <form onSubmit={(e) => e.preventDefault()} className="flex items-center gap-2 max-w-sm">
                 <input
                   type="email"
                   placeholder="Enter your email for deals..."
-                  className="bg-slate-900 border border-slate-800 rounded-lg px-3.5 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 flex-1"
+                  className="bg-slate-900 border border-slate-800 rounded-lg px-3.5 py-2 text-sm text-white focus:outline-none focus:border-blue-500 flex-1"
                 />
                 <button
   type="submit"
   aria-label="Subscribe to newsletter"
-  className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-1 shadow-glow-cyan"
+  className="bg-red-500 hover:bg-red-400 text-slate-950 px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-1 shadow-glow-red"
 >
   <Send className="w-4 h-4" />
 </button>
@@ -85,11 +85,11 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Shop Categories</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link to="/shop?cat=smartphones" className="hover:text-cyan-400 transition-colors">Smartphones</Link></li>
-              <li><Link to="/shop?cat=laptops" className="hover:text-cyan-400 transition-colors">Laptops & PC</Link></li>
-              <li><Link to="/shop?cat=audio" className="hover:text-cyan-400 transition-colors">Headphones & Audio</Link></li>
-              <li><Link to="/shop?cat=wearables" className="hover:text-cyan-400 transition-colors">Smartwatches</Link></li>
-              <li><Link to="/shop?cat=gaming" className="hover:text-cyan-400 transition-colors">Gaming Gear</Link></li>
+              <li><Link to="/shop?cat=smartphones" className="hover:text-blue-400 transition-colors">Smartphones</Link></li>
+              <li><Link to="/shop?cat=laptops" className="hover:text-blue-400 transition-colors">Laptops & PC</Link></li>
+              <li><Link to="/shop?cat=audio" className="hover:text-blue-400 transition-colors">Headphones & Audio</Link></li>
+              <li><Link to="/shop?cat=wearables" className="hover:text-blue-400 transition-colors">Smartwatches</Link></li>
+              <li><Link to="/shop?cat=gaming" className="hover:text-blue-400 transition-colors">Gaming Gear</Link></li>
             </ul>
           </div>
 
@@ -97,11 +97,11 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Navigation</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link to="/" className="hover:text-cyan-400 transition-colors">Home Page</Link></li>
-              <li><Link to="/shop" className="hover:text-cyan-400 transition-colors">All Products</Link></li>
-              <li><Link to="/about" className="hover:text-cyan-400 transition-colors">About Electromart</Link></li>
-              <li><Link to="/faq" className="hover:text-cyan-400 transition-colors">Help & FAQ</Link></li>
-              <li><Link to="/contact" className="hover:text-cyan-400 transition-colors">Contact Support</Link></li>
+              <li><Link to="/" className="hover:text-blue-400 transition-colors">Home Page</Link></li>
+              <li><Link to="/shop" className="hover:text-blue-400 transition-colors">All Products</Link></li>
+              <li><Link to="/about" className="hover:text-blue-400 transition-colors">About muchcomtech</Link></li>
+              <li><Link to="/faq" className="hover:text-blue-400 transition-colors">Help & FAQ</Link></li>
+              <li><Link to="/contact" className="hover:text-blue-400 transition-colors">Contact Support</Link></li>
             </ul>
           </div>
 
@@ -111,10 +111,10 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-slate-400 mb-2">Need quick order assistance?</p>
             <div className="space-y-2 text-xs">
               <p className="flex items-center gap-2 text-slate-300">
-                <span className="font-semibold text-cyan-400">WhatsApp:</span> +254 791 618 090
+                <span className="font-semibold text-blue-400">WhatsApp:</span> +254 791 618 090
               </p>
               <p className="flex items-center gap-2 text-slate-300">
-                <span className="font-semibold text-cyan-400">Email:</span> support@electromart.dev
+                <span className="font-semibold text-blue-400">Email:</span> wambuinancy187@gmail.com
               </p>
               <p className="text-slate-400">Mon - Sat: 9:00 AM - 8:00 PM EST</p>
             </div>

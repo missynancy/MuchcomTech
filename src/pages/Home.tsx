@@ -37,13 +37,13 @@ export const Home: React.FC = () => {
             {/* Hero Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-green-500/10 border-green-500/30 text-green-300 text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                <Sparkles className="w-3.5 h-3.5 text-blue-400" />
                 <span>Next-Gen Tech Arrival 2026</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
                 Empower Your Life With <br className="hidden sm:inline" />
-                <span className="text-gradient">Electromart Innovation</span>
+                <span className="text-gradient">muchcomtech Innovation</span>
               </h1>
 
               <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
@@ -64,7 +64,7 @@ export const Home: React.FC = () => {
                   to="/shop?cat=smartphones"
                   className="w-full sm:w-auto px-7 py-4 rounded-xl glass-panel text-slate-200 hover:text-green-400 font-bold text-base hover:border-green-500/40 transition-all flex items-center justify-center gap-2"
                 >
-                  <Cpu className="w-5 h-5 text-cyan-400" />
+                  <Cpu className="w-5 h-5 text-blue-400" />
                   <span>Flagship Deals</span>
                 </Link>
               </div>
@@ -203,7 +203,7 @@ export const Home: React.FC = () => {
                 "Ordered the VortexBook Laptop directly via WhatsApp. The response was instantaneous and delivery arrived within 24 hours!"
               </p>
               <div className="flex items-center space-x-3 pt-2">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-extrabold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600 flex items-center justify-center text-slate-950 font-extrabold">
                   DR
                 </div>
                 <div>
@@ -220,10 +220,10 @@ export const Home: React.FC = () => {
                 ))}
               </div>
               <p className="text-sm text-slate-300 leading-relaxed italic">
-                "The Apex Pro headphones ANC is phenomenal. Studio acoustics and the glass UI on Electromart made selecting specs seamless."
+                "The Apex Pro headphones ANC is phenomenal. Studio acoustics and the glass UI on muchcomtech made selecting specs seamless."
               </p>
               <div className="flex items-center space-x-3 pt-2">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white font-extrabold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-red-500 to-red-500 flex items-center justify-center text-white font-extrabold">
                   SK
                 </div>
                 <div>
@@ -243,7 +243,7 @@ export const Home: React.FC = () => {
                 "Swapped between WhatsApp and Email ordering options in the cart easily. Top tier customer service and 2-year warranty!"
               </p>
               <div className="flex items-center space-x-3 pt-2">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-400 to-cyan-500 flex items-center justify-center text-slate-950 font-extrabold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-400 to-blue-500 flex items-center justify-center text-slate-950 font-extrabold">
                   MC
                 </div>
                 <div>

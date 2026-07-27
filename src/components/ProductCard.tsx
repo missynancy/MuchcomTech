@@ -19,16 +19,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const isInCart = cartItems.some((item) => item.product.id === product.id);
 
   return (
-    <div className="group relative glass-card rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-glow-cyan hover:border-cyan-500/40 flex flex-col h-full">
+    <div className="group relative glass-card rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-glow-blue hover:border-blue-500/40 flex flex-col h-full">
       {/* Badges */}
       <div className="absolute top-3 left-3 z-10 flex flex-col gap-1.5">
         {product.isNew && (
-          <span className="bg-cyan-500 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md">
+          <span className="bg-blue-500 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md">
             NEW
           </span>
         )}
         {discountPercent > 0 && (
-          <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-md">
+          <span className="bg-gradient-to-r from-red-600 to-red-600 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-md">
             -{discountPercent}% OFF
           </span>
         )}
@@ -47,7 +47,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2">
           <Link
             to={`/product/${product.id}`}
-            className="p-3 bg-slate-900/90 text-white hover:text-cyan-400 rounded-full border border-slate-700 shadow-lg transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+            className="p-3 bg-slate-900/90 text-white hover:text-blue-400 rounded-full border border-slate-700 shadow-lg transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300"
             title="View Details"
           >
             <Eye className="w-5 h-5" />
@@ -59,7 +59,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
         <div>
           <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-            <span className="uppercase tracking-wider font-semibold text-cyan-400/90">{product.category}</span>
+            <span className="uppercase tracking-wider font-semibold text-blue-400/90">{product.category}</span>
             <div className="flex items-center space-x-1 text-amber-400">
               <Star className="w-3.5 h-3.5 fill-amber-400" />
               <span className="font-bold text-slate-200">{product.rating}</span>
@@ -68,7 +68,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
 
           <Link to={`/product/${product.id}`}>
-            <h3 className="text-base font-bold text-slate-100 group-hover:text-cyan-300 transition-colors line-clamp-2 leading-snug">
+            <h3 className="text-base font-bold text-slate-100 group-hover:text-blue-300 transition-colors line-clamp-2 leading-snug">
               {product.name}
             </h3>
           </Link>
@@ -94,7 +94,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             className={`p-2.5 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${
               isInCart
                 ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
-                : 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-glow-cyan'
+                : 'bg-red-500 hover:bg-red-400 text-slate-950 shadow-glow-red'
             }`}
             title={isInCart ? 'In Cart' : 'Add to Cart'}
           >

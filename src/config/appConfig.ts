@@ -1,7 +1,7 @@
 import type { AppConfig } from '../types';
 
 export const defaultConfig: AppConfig = {
-  storeName: 'Electromart',
+  storeName: 'muchcomtech',
   checkoutMode: 'whatsapp', // Swappable option: 'whatsapp' | 'email'
   whatsappNumber: '+254791618090', // Example WhatsApp number
   emailEndpoint: 'https://api.web3forms.com/submit', // Example form-to-email endpoint
@@ -12,7 +12,7 @@ export const defaultConfig: AppConfig = {
 };
 
 // Local storage key for dynamic user toggling during dev/demo
-const CONFIG_STORAGE_KEY = 'electromart_app_config';
+const CONFIG_STORAGE_KEY = 'muchcomtech_app_config';
 
 export function getAppConfig(): AppConfig {
   try {

@@ -56,7 +56,7 @@ export const ProductDetail: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-20 text-center space-y-4">
         <h2 className="text-2xl font-bold text-white">Product Not Found</h2>
         <p className="text-slate-400 text-sm">The hardware item you are looking for does not exist or has been removed.</p>
-        <Link to="/shop" className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 text-slate-950 font-bold rounded-xl">
+        <Link to="/shop" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-slate-950 font-bold rounded-xl">
           <ArrowLeft className="w-4 h-4" /> Back to Catalog
         </Link>
       </div>
@@ -103,7 +103,7 @@ export const ProductDetail: React.FC = () => {
               className="w-full h-full object-cover rounded-2xl transition-all duration-300"
             />
             {discountPercent > 0 && (
-              <span className="absolute top-6 left-6 bg-red-600 from-purple-600 to-pink-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-lg">
+              <span className="absolute top-6 left-6 bg-red-600 from-red-600 to-red-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-lg">
                 -{discountPercent}% OFF
               </span>
             )}
@@ -210,7 +210,7 @@ export const ProductDetail: React.FC = () => {
                 className={`py-3.5 px-6 rounded-xl text-sm font-extrabold transition-all flex items-center justify-center gap-2 ${
                   isInCart
                     ? 'bg-green-500/20 text-green-300 border border-green-500/40'
-                    : 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-glow-cyan'
+                    : 'bg-red-500 hover:bg-red-400 text-slate-950 shadow-glow-red'
                 }`}
               >
                 {isInCart ? <Check className="w-5 h-5" /> : <ShoppingCart className="w-5 h-5" />}
@@ -221,7 +221,7 @@ export const ProductDetail: React.FC = () => {
                 onClick={handleInstantWhatsAppOrder}
                 className="py-3.5 px-6 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-sm border border-slate-700 transition-all flex items-center justify-center gap-2"
               >
-                <Zap className="w-5 h-5 text-cyan-400" />
+                <Zap className="w-5 h-5 text-blue-400" />
                 <span>Buy Now & Checkout</span>
               </button>
             </div>
