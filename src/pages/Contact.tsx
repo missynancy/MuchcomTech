@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useState, useRef } from 'react';
 import { Mail, PhoneCall, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
@@ -11,8 +11,14 @@ export const Contact: React.FC = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
-
   const [sending, setSending] = useState(false);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
+  const scrollToForm = (e: React.MouseEvent) => {
+    e.preventDefault();
+    nameInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    nameInputRef.current?.focus();
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,8 +80,12 @@ export const Contact: React.FC = () => {
             <div>
               <h4 className="text-sm font-bold text-white">Customer Support Email</h4>
               <p className="text-xs text-slate-400 mt-1">For general inquiries & invoices</p>
-              <a href="mailto:wambuinancy187@gmail.com" className="text-sm font-extrabold text-blue-400 hover:underline block mt-1">
-                wambuinancy187@gmail.com
+              <a
+                href="#contact-form"
+                onClick={scrollToForm}
+                className="text-sm font-extrabold text-blue-400 hover:underline block mt-1"
+              >
+                Send us a message below
               </a>
             </div>
           </div>
@@ -97,23 +107,23 @@ export const Contact: React.FC = () => {
             </div>
             <div>
               <h4 className="text-sm font-bold text-white">Working Hours</h4>
-              <p className="text-xs text-slate-300 mt-1">Monday â€“ Friday: 9:00 AM â€“ 8:00 PM EST</p>
-              <p className="text-xs text-slate-400 mt-0.5">Saturday: 10:00 AM â€“ 6:00 PM EST</p>
+              <p className="text-xs text-slate-300 mt-1">Monday – Friday: 9:00 AM – 8:00 PM EST</p>
+              <p className="text-xs text-slate-400 mt-0.5">Saturday: 10:00 AM – 6:00 PM EST</p>
             </div>
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7" id="contact-form">
           <div className="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6">
             <h3 className="text-xl font-bold text-white">Send Us a Direct Message</h3>
 
             {submitted ? (
               <div className="p-8 text-center space-y-4 bg-slate-900/80 rounded-2xl border border-emerald-500/30">
                 <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
-                <h4 className="text-lg font-bold text-white">Message Received!</h4>
+                <h4 className="text-lg font-bold text-white">Thank you for contacting us!</h4>
                 <p className="text-xs text-slate-300 max-w-sm mx-auto">
-                  Thank you for reaching out. A representative will get back to your email within 2 hours.
+                  We will get back to you shortly.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -126,8 +136,11 @@ export const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-4 text-xs">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-slate-300 font-semibold mb-1">Your Name *</label>
+                    <label htmlFor="contact-name" className="block text-slate-300 font-semibold mb-1">Your Name *</label>
                     <input
+                      ref={nameInputRef}
+                      id="contact-name"
+                      name="name"
                       type="text"
                       required
                       placeholder="e.g. Sarah Jenkins"
@@ -137,8 +150,10 @@ export const Contact: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-slate-300 font-semibold mb-1">Your Email *</label>
+                    <label htmlFor="contact-email" className="block text-slate-300 font-semibold mb-1">Your Email *</label>
                     <input
+                      id="contact-email"
+                      name="email"
                       type="email"
                       required
                       placeholder="sarah@example.com"
@@ -150,8 +165,10 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Subject</label>
+                  <label htmlFor="contact-subject" className="block text-slate-300 font-semibold mb-1">Subject</label>
                   <input
+                    id="contact-subject"
+                    name="subject"
                     type="text"
                     placeholder="Product inquiry, warranty question..."
                     value={formData.subject}
@@ -161,8 +178,10 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Message *</label>
+                  <label htmlFor="contact-message" className="block text-slate-300 font-semibold mb-1">Message *</label>
                   <textarea
+                    id="contact-message"
+                    name="message"
                     rows={4}
                     required
                     placeholder="How can we help you today?"

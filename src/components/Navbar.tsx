@@ -86,7 +86,7 @@ export const Navbar: React.FC = () => {
                 to={link.path}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive(link.path)
-                    ? 'text-green-400 bg-green-500/10 border border-cgreen-500/20'
+                    ? 'text-green-400 bg-green-500/10 border border-green-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                 }`}
               >
@@ -185,4 +185,5 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+
 
