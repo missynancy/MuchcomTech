@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { HelpCircle, ChevronDown, ChevronUp, PhoneCall } from 'lucide-react';
 
 interface FAQItem {
@@ -29,7 +29,7 @@ export const FAQ: React.FC = () => {
     {
       category: 'Shipping & Delivery',
       question: 'How long does shipping take and what does it cost?',
-      answer: 'We offer express delivery. Orders over $150 qualify for FREE delivery. Local metro deliveries arrive within 24 hours, while standard regional shipping takes 2-3 business days.',
+      answer: 'We offer express delivery. Orders over KSh 150 qualify for FREE delivery. Local metro deliveries arrive within 24 hours, while standard regional shipping takes 2-3 business days.',
     },
     {
       category: 'Payment Methods',
@@ -116,3 +116,4 @@ export const FAQ: React.FC = () => {
     </div>
   );
 };
+

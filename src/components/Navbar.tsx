@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShoppingBag, Zap, Menu, X, Search, PhoneCall, Mail } from 'lucide-react';
 import { useCart } from '../context/CartContext';
@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center space-x-2">
             <span className="flex h-2 w-2 rounded-full bg-green-400 animate-ping"></span>
             <span className="font-medium text-green-300">Fast Dispatch Available</span>
-            <span className="hidden md:inline text-slate-400">| Free Shipping on orders over $150</span>
+            <span className="hidden md:inline text-slate-400">| Free Shipping on orders over KSh 150</span>
           </div>
           <div className="flex items-center space-x-4">
             {/* Swappable Config Switcher in Header */}
@@ -185,3 +185,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+

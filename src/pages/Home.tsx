@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Star, Cpu, ChevronRight } from 'lucide-react';
 import type { Product, Category } from '../types';
@@ -103,7 +103,7 @@ export const Home: React.FC = () => {
                           <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400">Featured Spotlight</span>
                           <h3 className="text-sm font-bold text-white">Apex Pro ANC Headphones</h3>
                         </div>
-                        <span className="text-sm font-extrabold text-red-600">$299.00</span>
+                        <span className="text-sm font-extrabold text-red-600">KSh 299</span>
                       </div>
                     </div>
                   </div>
@@ -208,7 +208,7 @@ export const Home: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">David Miller</h4>
-                  <span className="text-xs text-slate-400">Verified Buyer — NYC</span>
+                  <span className="text-xs text-slate-400">Verified Buyer â€” NYC</span>
                 </div>
               </div>
             </div>
@@ -258,3 +258,4 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+

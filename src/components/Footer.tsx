@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, ShieldCheck, Truck, Headphones, Send, CreditCard, Lock } from 'lucide-react';
 
@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <h4 className="text-sm font-semibold text-white">Express Express Delivery</h4>
-              <p className="text-xs text-slate-400 mt-0.5">Free shipping on orders over $150</p>
+              <p className="text-xs text-slate-400 mt-0.5">Free shipping on orders over KSh 150</p>
             </div>
           </div>
           <div className="flex items-start space-x-3.5">
@@ -127,7 +127,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright line */}
         <div className="border-t border-slate-800/80 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} MuchcomTech. All rights reserved.</p>
+          <p>Â© {new Date().getFullYear()} MuchcomTech. All rights reserved.</p>
           <div className="flex space-x-4 mt-2 sm:mt-0">
             <Link to="/faq" className="hover:text-slate-400">Privacy Policy</Link>
             <Link to="/faq" className="hover:text-slate-400">Terms of Service</Link>
@@ -138,3 +138,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

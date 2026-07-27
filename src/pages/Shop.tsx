@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search, SlidersHorizontal, RotateCcw, PackageX } from 'lucide-react';
 import type { Product, Category, FilterOptions } from '../types';
@@ -156,8 +156,8 @@ export const Shop: React.FC = () => {
                 className="w-full accent-blue-400 bg-slate-800 h-1.5 rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-slate-500">
-                <span>$100</span>
-                <span>$2,500</span>
+                <span>KSh 100</span>
+                <span>KSh 2,500</span>
               </div>
             </div>
 
@@ -224,3 +224,4 @@ export const Shop: React.FC = () => {
     </div>
   );
 };
+
