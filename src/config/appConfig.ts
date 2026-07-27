@@ -4,7 +4,7 @@ export const defaultConfig: AppConfig = {
   storeName: 'muchcomtech',
   checkoutMode: 'whatsapp',
   whatsappNumber: '+254791618090',
-  emailEndpoint: 'https://api.web3forms.com/submit',
+  emailEndpoint: 'https://formspree.io/f/xeeyvbzl',
   currencySymbol: 'KSh ',
   currencyCode: 'KES',
   taxRate: 0.08,
@@ -35,3 +35,4 @@ export function saveAppConfig(newConfig: Partial<AppConfig>): AppConfig {
   }
   return updated;
 }
+
