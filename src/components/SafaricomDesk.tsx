@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { Smartphone, IdCard, Repeat, Landmark, MessageCircle } from 'lucide-react';
+import { IdCard, Repeat, Landmark, MessageCircle } from 'lucide-react';
 
 const services = [
   {
@@ -68,3 +68,4 @@ export const SafaricomDesk: React.FC = () => {
     </section>
   );
 };
+
