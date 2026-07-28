@@ -1,4 +1,4 @@
-export interface ProductSpec {
+﻿export interface ProductSpec {
   name: string;
   value: string;
 }
@@ -50,7 +50,7 @@ export type CheckoutMode = 'whatsapp' | 'email';
 export interface AppConfig {
   storeName: string;
   checkoutMode: CheckoutMode;
-  whatsappNumber: string; // e.g. "254791618090"
+  whatsappNumber: string; // e.g. "254725260133"
   emailEndpoint: string;  // e.g. "https://formspree.io/f/sample"
   currencySymbol: string;
   currencyCode: string;
@@ -65,3 +65,4 @@ export interface FilterOptions {
   searchQuery: string;
   sortBy: 'featured' | 'price-asc' | 'price-desc' | 'rating';
 }
+

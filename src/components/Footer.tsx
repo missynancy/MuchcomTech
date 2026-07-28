@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              muchcomtech is your destination for next-generation consumer electronics, flagship smartphones, gaming hardware, and studio audio equipment.
+              Muchcom Tech is your local Safaricom agent for M-PESA, SIM registration and bundles, plus a trusted shop for genuine smartphones, laptops, and accessories.
             </p>
             <div className="pt-2">
               <form onSubmit={(e) => e.preventDefault()} className="flex items-center gap-2 max-w-sm">
@@ -111,10 +111,10 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-slate-400 mb-2">Need quick order assistance?</p>
             <div className="space-y-2 text-xs">
               <p className="flex items-center gap-2 text-slate-300">
-                <span className="font-semibold text-blue-400">WhatsApp:</span> +254 791 618 090
+                <span className="font-semibold text-blue-400">WhatsApp:</span> +254 725 260 133
               </p>
               <p className="flex items-center gap-2 text-slate-300">
-                <span className="font-semibold text-blue-400">Email:</span> wambuinancy187@gmail.com
+                <span className="font-semibold text-blue-400">Email:</span> johnmuchwait@gmail.com
               </p>
               <p className="text-slate-400">Mon - Sat: 9:00 AM - 8:00 PM EST</p>
             </div>
@@ -137,3 +137,5 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
+

@@ -37,7 +37,7 @@ export const SafaricomDesk: React.FC = () => {
             </p>
           </div>
           <a
-            href="https://wa.me/254791618090?text=Hi%20Muchcom%20Tech%2C%20I%27d%20like%20help%20with%20a%20Safaricom%20service."
+            href="https://wa.me/254725260133?text=Hi%20Muchcom%20Tech%2C%20I%27d%20like%20help%20with%20a%20Safaricom%20service."
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-slate-950 font-extrabold text-sm px-5 py-3 rounded-xl transition-colors"
@@ -68,4 +68,5 @@ export const SafaricomDesk: React.FC = () => {
     </section>
   );
 };
+
 

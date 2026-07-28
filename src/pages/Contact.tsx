@@ -14,12 +14,6 @@ export const Contact: React.FC = () => {
   const [sending, setSending] = useState(false);
   const nameInputRef = useRef<HTMLInputElement>(null);
 
-  const scrollToForm = (e: React.MouseEvent) => {
-    e.preventDefault();
-    nameInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    nameInputRef.current?.focus();
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
@@ -53,7 +47,7 @@ export const Contact: React.FC = () => {
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">We're Here to Help</h1>
         <p className="text-slate-400 text-sm">
-          Have a question about product specs, order dispatch status, or partnership opportunities? Reach out anytime.
+          Have a question about product specs, order dispatch status, or a Safaricom service? Reach out anytime.
         </p>
       </div>
 
@@ -65,10 +59,10 @@ export const Contact: React.FC = () => {
               <PhoneCall className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white">WhatsApp Order Hotline</h4>
-              <p className="text-xs text-slate-400 mt-1">Instant response during business hours</p>
-              <a href="https://wa.me/254791618090" className="text-sm font-extrabold text-emerald-400 hover:underline block mt-1">
-                +254 791 618 090
+              <h4 className="text-sm font-bold text-white">Call or WhatsApp</h4>
+              <p className="text-xs text-slate-400 mt-1">One number for calls and WhatsApp, instant response during business hours</p>
+              <a href="tel:+254725260133" className="text-sm font-extrabold text-emerald-400 hover:underline block mt-1">
+                +254 725 260 133
               </a>
             </div>
           </div>
@@ -78,14 +72,10 @@ export const Contact: React.FC = () => {
               <Mail className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white">Customer Support Email</h4>
-              <p className="text-xs text-slate-400 mt-1">For general inquiries & invoices</p>
-              <a
-                href="#contact-form"
-                onClick={scrollToForm}
-                className="text-sm font-extrabold text-blue-400 hover:underline block mt-1"
-              >
-                Send us a message below
+              <h4 className="text-sm font-bold text-white">Email</h4>
+              <p className="text-xs text-slate-400 mt-1">For invoices and general inquiries</p>
+              <a href="mailto:johnmuchwait@gmail.com" className="text-sm font-extrabold text-blue-400 hover:underline block mt-1">
+                johnmuchwait@gmail.com
               </a>
             </div>
           </div>
@@ -95,9 +85,8 @@ export const Contact: React.FC = () => {
               <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white">Flagship Store Location</h4>
-              <p className="text-xs text-slate-400 mt-1">100 Tech Park Way, Suite 400</p>
-              <span className="text-xs font-semibold text-slate-200 block mt-0.5">Silicon Valley, CA 94025</span>
+              <h4 className="text-sm font-bold text-white">Shop Location</h4>
+              <p className="text-xs text-amber-400 mt-1">[Placeholder — needs your real shop address/area]</p>
             </div>
           </div>
 
@@ -107,8 +96,7 @@ export const Contact: React.FC = () => {
             </div>
             <div>
               <h4 className="text-sm font-bold text-white">Working Hours</h4>
-              <p className="text-xs text-slate-300 mt-1">Monday – Friday: 9:00 AM – 8:00 PM EST</p>
-              <p className="text-xs text-slate-400 mt-0.5">Saturday: 10:00 AM – 6:00 PM EST</p>
+              <p className="text-xs text-slate-300 mt-1">Monday - Saturday: 9:00 AM - 8:00 PM</p>
             </div>
           </div>
         </div>
@@ -207,4 +195,3 @@ export const Contact: React.FC = () => {
     </div>
   );
 };
-

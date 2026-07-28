@@ -19,7 +19,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const isInCart = cartItems.some((item) => item.product.id === product.id);
 
   const whatsappMessage = `Hi Muchcom Tech, I'm interested in the ${product.name} (${formatCurrency(product.price, config.currencyCode, config.currencySymbol)}). Is it available?`;
-  const whatsappLink = `https://wa.me/254791618090?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappLink = `https://wa.me/254725260133?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="group relative glass-card rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-glow-blue hover:border-blue-500/40 flex flex-col h-full">
@@ -123,3 +123,4 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     </div>
   );
 };
+

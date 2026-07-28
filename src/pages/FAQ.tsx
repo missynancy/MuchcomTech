@@ -104,7 +104,7 @@ export const FAQ: React.FC = () => {
           Can't find the answer you're looking for? Reach out directly to our support team on WhatsApp.
         </p>
         <a
-          href="https://wa.me/254791618090?text=Hi%20muchcomtech!%20I%20have%20a%20question%20about%20my%20order."
+          href="https://wa.me/254725260133?text=Hi%20muchcomtech!%20I%20have%20a%20question%20about%20my%20order."
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm rounded-xl shadow-glow-blue transition-colors"
@@ -116,4 +116,5 @@ export const FAQ: React.FC = () => {
     </div>
   );
 };
+
 

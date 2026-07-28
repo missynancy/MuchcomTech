@@ -171,7 +171,7 @@ export const Home: React.FC = () => {
                 <div className="bg-green-500/10 border-t border-green-500/20 px-5 py-4 flex items-center justify-between">
                   <span className="text-2xl font-black text-green-400">KSh {deal.price}</span>
                   <a
-                    href={`https://wa.me/254791618090?text=${encodeURIComponent(`Hi Muchcom Tech, I've paid KSh ${deal.price} for ${deal.title} to Till 5509000. Here is my M-Pesa code: `)}`}
+                    href={`https://wa.me/254725260133?text=${encodeURIComponent(`Hi Muchcom Tech, I've paid KSh ${deal.price} for ${deal.title} to Till 5509000. Here is my M-Pesa code: `)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-600 hover:bg-green-500 text-white text-xs font-bold px-3.5 py-2 rounded-lg shadow transition-colors"
@@ -229,7 +229,7 @@ export const Home: React.FC = () => {
               <h3 className="text-sm font-bold text-white">4. Send Us Your Code</h3>
               <p className="text-sm text-slate-400 mt-1">Message us your M-Pesa confirmation code on WhatsApp for instant activation.</p>
               <a
-                href="https://wa.me/254791618090?text=Hi%20Muchcom%20Tech%2C%20here%20is%20my%20M-Pesa%20confirmation%20code%3A%20"
+                href="https://wa.me/254725260133?text=Hi%20Muchcom%20Tech%2C%20here%20is%20my%20M-Pesa%20confirmation%20code%3A%20"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 mt-3 bg-green-500 hover:bg-green-400 text-slate-950 text-xs font-bold px-3.5 py-2 rounded-lg transition-colors"
@@ -320,15 +320,15 @@ export const Home: React.FC = () => {
                 ))}
               </div>
               <p className="text-sm text-slate-300 leading-relaxed italic">
-                "Ordered the VortexBook Laptop directly via WhatsApp. The response was instantaneous and delivery arrived within 24 hours!"
+                "Registered a new SIM here in under 10 minutes, no queuing like at the main Safaricom shop in town. Straightforward and fast."
               </p>
               <div className="flex items-center space-x-3 pt-2">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600 flex items-center justify-center text-slate-950 font-extrabold">
-                  DR
+                  BO
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">David Miller</h4>
-                  <span className="text-xs text-slate-400">Verified Buyer</span>
+                  <h4 className="text-sm font-bold text-white">Brian Otieno</h4>
+                  <span className="text-xs text-slate-400">SIM Registration</span>
                 </div>
               </div>
             </div>
@@ -340,15 +340,15 @@ export const Home: React.FC = () => {
                 ))}
               </div>
               <p className="text-sm text-slate-300 leading-relaxed italic">
-                "The Apex Pro headphones ANC is phenomenal. Studio acoustics and the glass UI on muchcomtech made selecting specs seamless."
+                "Paid Till 5509000 for a data bundle, sent my M-Pesa code on WhatsApp, and was topped up in under five minutes. Cheaper than the standard menu too."
               </p>
               <div className="flex items-center space-x-3 pt-2">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-red-500 to-red-500 flex items-center justify-center text-white font-extrabold">
-                  SK
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-green-500 to-emerald-500 flex items-center justify-center text-slate-950 font-extrabold">
+                  MW
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">Sarah Jenkins</h4>
-                  <span className="text-xs text-slate-400">Audio Engineer</span>
+                  <h4 className="text-sm font-bold text-white">Mercy Wanjiru</h4>
+                  <span className="text-xs text-slate-400">Data Bundle Customer</span>
                 </div>
               </div>
             </div>
@@ -360,15 +360,15 @@ export const Home: React.FC = () => {
                 ))}
               </div>
               <p className="text-sm text-slate-300 leading-relaxed italic">
-                "Swapped between WhatsApp and Email ordering options in the cart easily. Top tier customer service and 2-year warranty!"
+                "Bought my phone here after chatting on WhatsApp first to confirm it was genuine. Good price, real warranty, no pressure to buy."
               </p>
               <div className="flex items-center space-x-3 pt-2">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-400 to-blue-500 flex items-center justify-center text-slate-950 font-extrabold">
-                  MC
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-red-500 to-amber-500 flex items-center justify-center text-white font-extrabold">
+                  KK
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">Michael Chen</h4>
-                  <span className="text-xs text-slate-400">Software Architect</span>
+                  <h4 className="text-sm font-bold text-white">Kevin Kiprotich</h4>
+                  <span className="text-xs text-slate-400">Smartphone Buyer</span>
                 </div>
               </div>
             </div>
@@ -378,6 +378,8 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+
+
 
 
 
