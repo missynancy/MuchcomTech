@@ -106,7 +106,7 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-green-500/30 shadow-glow-green text-center bg-white">
-                  <p className="text-[11px] uppercase font-bold tracking-wider text-slate-500">
+                  <p className="text-[11px] uppercase font-bold tracking-wider text-slate-600">
                     Lipa na M-Pesa Buy Goods Till
                   </p>
                   <div className="text-4xl sm:text-5xl font-black text-blue-900 my-3 tracking-widest">
@@ -378,5 +378,6 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+
 
 

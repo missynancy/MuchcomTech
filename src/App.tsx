@@ -13,6 +13,8 @@ import { Cart } from './pages/Cart';
 import { About } from './pages/About';
 import { FAQ } from './pages/FAQ';
 import { Contact } from './pages/Contact';
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
 
 export const App: React.FC = () => {
   return (
@@ -30,6 +32,8 @@ export const App: React.FC = () => {
               <Route path="/about" element={<About />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </main>
           <Footer />
@@ -43,3 +47,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

@@ -11,11 +11,11 @@ export const SupportBar: React.FC = () => {
         </span>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <a href="tel:0725260133" className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-3 py-2 rounded-lg transition-colors">
+        <a href="tel:0725260133" aria-label="Call us" className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-3 py-2 rounded-lg transition-colors">
           <Phone className="w-3.5 h-3.5" />
           <span className="hidden sm:inline">Call</span>
         </a>
-        <a href="https://wa.me/254791618090?text=Hi%20Muchcom%20Tech%2C%20my%20bundle%20delivery%20is%20delayed." target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 bg-green-600 hover:bg-green-500 text-white text-xs font-bold px-3 py-2 rounded-lg transition-colors">
+        <a href="https://wa.me/254791618090?text=Hi%20Muchcom%20Tech%2C%20my%20bundle%20delivery%20is%20delayed." target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp" className="flex items-center gap-1.5 bg-green-600 hover:bg-green-500 text-white text-xs font-bold px-3 py-2 rounded-lg transition-colors">
           <MessageCircle className="w-3.5 h-3.5" />
           <span className="hidden sm:inline">WhatsApp</span>
         </a>

@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
               <Truck className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-white">Express Express Delivery</h4>
+              <h3 className="text-sm font-semibold text-white">Express Delivery</h3>
               <p className="text-xs text-slate-400 mt-0.5">Free shipping on orders over KSh 150</p>
             </div>
           </div>
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-white">2-Year Official Warranty</h4>
+              <h3 className="text-sm font-semibold text-white">2-Year Official Warranty</h3>
               <p className="text-xs text-slate-400 mt-0.5">100% genuine guaranteed items</p>
             </div>
           </div>
@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
               <Headphones className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-white">24/7 Tech Support</h4>
+              <h3 className="text-sm font-semibold text-white">24/7 Tech Support</h3>
               <p className="text-xs text-slate-400 mt-0.5">Direct instant response on WhatsApp</p>
             </div>
           </div>
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
               <Lock className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-white">Secure Checkout Flow</h4>
+              <h3 className="text-sm font-semibold text-white">Secure Checkout Flow</h3>
               <p className="text-xs text-slate-400 mt-0.5">Encrypted WhatsApp & Form API</p>
             </div>
           </div>
@@ -71,19 +71,19 @@ export const Footer: React.FC = () => {
                   className="bg-slate-900 border border-slate-800 rounded-lg px-3.5 py-2 text-sm text-white focus:outline-none focus:border-blue-500 flex-1"
                 />
                 <button
-  type="submit"
-  aria-label="Subscribe to newsletter"
-  className="bg-red-500 hover:bg-red-400 text-slate-950 px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-1 shadow-glow-red"
->
-  <Send className="w-4 h-4" />
-</button>
+                  type="submit"
+                  aria-label="Subscribe to newsletter"
+                  className="bg-red-500 hover:bg-red-400 text-slate-950 px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-1 shadow-glow-red"
+                >
+                  <Send className="w-4 h-4" />
+                </button>
               </form>
             </div>
           </div>
 
           {/* Catalog Links */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Shop Categories</h4>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Shop Categories</h3>
             <ul className="space-y-2.5 text-sm">
               <li><Link to="/shop?cat=smartphones" className="hover:text-blue-400 transition-colors">Smartphones</Link></li>
               <li><Link to="/shop?cat=laptops" className="hover:text-blue-400 transition-colors">Laptops & PC</Link></li>
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Navigation</h4>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Navigation</h3>
             <ul className="space-y-2.5 text-sm">
               <li><Link to="/" className="hover:text-blue-400 transition-colors">Home Page</Link></li>
               <li><Link to="/shop" className="hover:text-blue-400 transition-colors">All Products</Link></li>
@@ -107,7 +107,7 @@ export const Footer: React.FC = () => {
 
           {/* Contact / Store Info */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Store Support</h4>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Store Support</h3>
             <p className="text-xs text-slate-400 mb-2">Need quick order assistance?</p>
             <div className="space-y-2 text-xs">
               <p className="flex items-center gap-2 text-slate-300">
@@ -124,13 +124,12 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom copyright line */}
         <div className="border-t border-slate-800/80 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
-          <p>Â© {new Date().getFullYear()} MuchcomTech. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MuchcomTech. All rights reserved.</p>
           <div className="flex space-x-4 mt-2 sm:mt-0">
-            <Link to="/faq" className="hover:text-slate-400">Privacy Policy</Link>
-            <Link to="/faq" className="hover:text-slate-400">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-slate-400">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-slate-400">Terms of Service</Link>
             <Link to="/contact" className="hover:text-slate-400">Store Locator</Link>
           </div>
         </div>
@@ -138,4 +137,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-
