@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles, Star, Cpu, ChevronRight, Smartphone, ShoppingBag,
 import type { Product, Category } from '../types';
 import { getFeaturedProducts, getCategories } from '../data/productService';
 import { ProductCard } from '../components/ProductCard';
+import { SafaricomDesk } from '../components/SafaricomDesk';
 
 export const Home: React.FC = () => {
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
@@ -126,6 +127,8 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <SafaricomDesk />
 
       {/* Deals Grid Section */}
       <section id="deals" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
@@ -375,3 +378,5 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+
+

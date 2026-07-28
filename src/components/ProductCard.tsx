@@ -1,6 +1,6 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import { Star, ShoppingCart, Eye, Check } from 'lucide-react';
+import { Star, ShoppingCart, Eye, Check, MessageCircle } from 'lucide-react';
 import type { Product } from '../types';
 import { useCart } from '../context/CartContext';
 import { formatCurrency, calculateDiscountPercent } from '../utils/formatters';
@@ -17,6 +17,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     : 0;
 
   const isInCart = cartItems.some((item) => item.product.id === product.id);
+
+  const whatsappMessage = `Hi Muchcom Tech, I'm interested in the ${product.name} (${formatCurrency(product.price, config.currencyCode, config.currencySymbol)}). Is it available?`;
+  const whatsappLink = `https://wa.me/254791618090?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="group relative glass-card rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-glow-blue hover:border-blue-500/40 flex flex-col h-full">
@@ -75,7 +78,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
 
         {/* Price & Action */}
-        <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+        <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between gap-2">
           <div>
             <div className="flex items-baseline space-x-2">
               <span className="text-lg font-extrabold text-white">
@@ -89,18 +92,32 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
           </div>
 
-          <button
-            onClick={() => addToCart(product, 1)}
-            className={`p-2.5 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${
-              isInCart
-                ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
-                : 'bg-red-500 hover:bg-red-400 text-slate-950 shadow-glow-red'
-            }`}
-            title={isInCart ? 'In Cart' : 'Add to Cart'}
-          >
-            {isInCart ? <Check className="w-4 h-4" /> : <ShoppingCart className="w-4 h-4" />}
-            <span className="hidden sm:inline text-xs">{isInCart ? 'Added' : 'Add'}</span>
-          </button>
+          <div className="flex items-center gap-1.5 shrink-0">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="p-2.5 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-1.5 bg-green-500 hover:bg-green-400 text-slate-950"
+              title="Chat to Buy / Inquire"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span className="hidden sm:inline text-xs">Chat</span>
+            </a>
+
+            <button
+              onClick={() => addToCart(product, 1)}
+              className={`p-2.5 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${
+                isInCart
+                  ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
+                  : 'bg-red-500 hover:bg-red-400 text-slate-950 shadow-glow-red'
+              }`}
+              title={isInCart ? 'In Cart' : 'Add to Cart'}
+            >
+              {isInCart ? <Check className="w-4 h-4" /> : <ShoppingCart className="w-4 h-4" />}
+              <span className="hidden sm:inline text-xs">{isInCart ? 'Added' : 'Add'}</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
