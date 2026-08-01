@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -15,6 +15,7 @@ import { FAQ } from './pages/FAQ';
 import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { SHOP_ENABLED } from './config/features';
 
 export const App: React.FC = () => {
   return (
@@ -26,9 +27,9 @@ export const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/product/:id" element={<ProductDetail />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/shop" element={SHOP_ENABLED ? <Shop /> : <Navigate to="/" replace />} />
+              <Route path="/product/:id" element={SHOP_ENABLED ? <ProductDetail /> : <Navigate to="/" replace />} />
+              <Route path="/cart" element={SHOP_ENABLED ? <Cart /> : <Navigate to="/" replace />} />
               <Route path="/about" element={<About />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
@@ -47,4 +48,3 @@ export const App: React.FC = () => {
 };
 
 export default App;
-

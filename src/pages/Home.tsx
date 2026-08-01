@@ -5,6 +5,7 @@ import type { Product, Category } from '../types';
 import { getFeaturedProducts, getCategories } from '../data/productService';
 import { ProductCard } from '../components/ProductCard';
 import { SafaricomDesk } from '../components/SafaricomDesk';
+import { SHOP_ENABLED } from '../config/features';
 
 export const Home: React.FC = () => {
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
@@ -81,10 +82,12 @@ export const Home: React.FC = () => {
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
 
-                <Link to="/shop" className="w-full sm:w-auto px-7 py-4 rounded-xl glass-panel text-slate-200 hover:text-blue-400 font-bold text-base hover:border-blue-500/40 transition-all flex items-center justify-center gap-2">
-                  <Cpu className="w-5 h-5 text-blue-400" />
-                  <span>Shop Electronics</span>
-                </Link>
+                {SHOP_ENABLED && (
+                  <Link to="/shop" className="w-full sm:w-auto px-7 py-4 rounded-xl glass-panel text-slate-200 hover:text-blue-400 font-bold text-base hover:border-blue-500/40 transition-all flex items-center justify-center gap-2">
+                    <Cpu className="w-5 h-5 text-blue-400" />
+                    <span>Shop Electronics</span>
+                  </Link>
+                )}
               </div>
 
               <div className="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
@@ -183,6 +186,7 @@ export const Home: React.FC = () => {
             ))}
         </div>
       </section>
+
       {/* How to Buy Guide Section */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
@@ -228,6 +232,7 @@ export const Home: React.FC = () => {
             <div className="flex-1">
               <h3 className="text-sm font-bold text-white">4. Send Us Your Code</h3>
               <p className="text-sm text-slate-400 mt-1">Message us your M-Pesa confirmation code on WhatsApp for instant activation.</p>
+              
               <a
                 href="https://wa.me/254725260133?text=Hi%20Muchcom%20Tech%2C%20here%20is%20my%20M-Pesa%20confirmation%20code%3A%20"
                 target="_blank"
@@ -242,67 +247,69 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-
-      {/* Featured Categories Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
-          <div>
-            <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Explore Categories</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">Shop by Hardware Type</h2>
-          </div>
-          <Link to="/shop" className="mt-3 sm:mt-0 text-sm font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1 group">
-            <span>View All Categories</span>
-            <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
-          {categories.map((cat) => (
-            <Link
-              key={cat.id}
-              to={`/shop?cat=${cat.slug}`}
-              className="group glass-card p-4 rounded-2xl border border-slate-800 hover:border-blue-500/40 hover:-translate-y-1.5 transition-all text-center flex flex-col items-center justify-between"
-            >
-              <div className="w-16 h-16 rounded-2xl overflow-hidden mb-3 bg-slate-900 p-1">
-                <img src={cat.image} alt={cat.name} className="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-300" />
+      {SHOP_ENABLED && (
+        <>
+          {/* Featured Categories Section */}
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
+              <div>
+                <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Explore Categories</span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">Shop by Hardware Type</h2>
               </div>
-              <h3 className="text-xs sm:text-sm font-bold text-slate-200 group-hover:text-blue-300 transition-colors line-clamp-1">
-                {cat.name}
-              </h3>
-              <span className="text-[11px] text-slate-400 mt-1 font-medium">{cat.itemCount} items</span>
-            </Link>
-          ))}
-        </div>
-      </section>
+              <Link to="/shop" className="mt-3 sm:mt-0 text-sm font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1 group">
+                <span>View All Categories</span>
+                <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
 
-      
-      {/* Featured Products Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
-          <div>
-            <span className="text-xs font-bold text-green-400 uppercase tracking-widest">Curated Collection</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">Featured Flagship Gadgets</h2>
-          </div>
-          <Link to="/shop" className="mt-3 sm:mt-0 text-sm font-bold text-green-400 hover:text-green-300 flex items-center gap-1 group">
-            <span>Browse Full Catalog</span>
-            <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+              {categories.map((cat) => (
+                <Link
+                  key={cat.id}
+                  to={`/shop?cat=${cat.slug}`}
+                  className="group glass-card p-4 rounded-2xl border border-slate-800 hover:border-blue-500/40 hover:-translate-y-1.5 transition-all text-center flex flex-col items-center justify-between"
+                >
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden mb-3 bg-slate-900 p-1">
+                    <img src={cat.image} alt={cat.name} className="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <h3 className="text-xs sm:text-sm font-bold text-slate-200 group-hover:text-blue-300 transition-colors line-clamp-1">
+                    {cat.name}
+                  </h3>
+                  <span className="text-[11px] text-slate-400 mt-1 font-medium">{cat.itemCount} items</span>
+                </Link>
+              ))}
+            </div>
+          </section>
 
-        {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-pulse">
-            {[1, 2, 3, 4].map((n) => (
-              <div key={n} className="h-80 bg-slate-900/60 rounded-2xl border border-slate-800" />
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        )}
-      </section>
+          {/* Featured Products Section */}
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
+              <div>
+                <span className="text-xs font-bold text-green-400 uppercase tracking-widest">Curated Collection</span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">Featured Flagship Gadgets</h2>
+              </div>
+              <Link to="/shop" className="mt-3 sm:mt-0 text-sm font-bold text-green-400 hover:text-green-300 flex items-center gap-1 group">
+                <span>Browse Full Catalog</span>
+                <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+
+            {loading ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-pulse">
+                {[1, 2, 3, 4].map((n) => (
+                  <div key={n} className="h-80 bg-slate-900/60 rounded-2xl border border-slate-800" />
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {featuredProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            )}
+          </section>
+        </>
+      )}
 
       {/* Testimonials Placeholder Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -378,8 +385,3 @@ export const Home: React.FC = () => {
     </div>
   );
 };
-
-
-
-
-
