@@ -1,32 +1,50 @@
-# React + TypeScript + Vite
+# MuchcomTech — Telecom E-Commerce Framework (Staging Phase)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A type-safe, mobile-first e-commerce engine built from scratch with **React**, **TypeScript**, and **Vite**. This specific iteration was structurally engineered as a localized retail distribution layout for **Safaricom telecommunication products and services**. 
 
-Currently, two official plugins are available:
+*Note: The platform is currently maintained in a stable staging environment pending inventory and corporate partner API re-alignments.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Staging Architecture Live Preview:** [missynancy.github.io/MuchcomTech/](https://github.io)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💡 The Architectural Challenge & Business Logic
 
-## Expanding the Oxlint configuration
+Selling telecommunication assets (such as data configurations, devices, and airtime) introduces unique data management and payment constraints in the East African ecosystem. Traditional Western checkout funnels result in massive drop-off rates due to gateway friction.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### The Engineering Solution:
+1. **Zero-Friction Transaction Piping:** The engine intercepts user product arrays natively in real-time, serializes the complex utility metadata into a clean text string, and routes it directly into the **WhatsApp Business API**. This bridges the gap between digital selection and immediate mobile-money alignment (Lipa na M-Pesa tracking) asynchronously.
+2. **Modular Inventory State Configuration:** Built with strict component abstraction, allowing the entire storefront configuration to be put on standby or updated with new vendor criteria instantly without breaking core UI templates.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+---
+
+## 🛠️ Technical Stack & Page Ecosystem Hygiene
+
+- **State Management:** React Functional Hooks optimized to maintain lean rendering profiles during cart state mutations.
+- **Type Safety Layer:** TypeScript interface protocols defining strict rules for nested data categories (e.g., specific bundles vs hardware devices).
+- **Core Web Vitals Engineering:** Designed with highly efficient semantic HTML5 layouts to minimize Cumulative Layout Shift (CLS) and deliver rapid mobile load times on variable cellular networks.
+
+---
+
+## 📦 Local Deployment Setup
+
+```bash
+# Clone the staging source repository
+git clone https://github.com
+
+# Navigate to the folder directory
+cd MuchcomTech
+
+# Install project asset dependencies
+npm install
+
+# Run the local optimization build pipeline
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## 📬 Contractor Contact Details
+- **Technical Operator:** [Nancy Wambui](https://github.io)
+- **LinkedIn Pipeline:** [Connect on LinkedIn](https://linkedin.com)
+- **Direct Mailbox:** wambuinancy187@gmail.com
