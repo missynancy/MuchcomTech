@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -20,7 +20,7 @@ import { SHOP_ENABLED } from './config/features';
 export const App: React.FC = () => {
   return (
     <CartProvider>
-      <Router basename="/MuchcomTech/">
+      <Router>
         <div className="flex flex-col min-h-screen bg-[#0B0F17] text-slate-100 selection:bg-blue-500 selection:text-slate-950 font-sans">
           <Navbar />
           <main className="flex-grow">
