@@ -35,11 +35,6 @@ export const Navbar: React.FC = () => {
       {/* Top Banner Notice */}
       <div className="bg-gradient-to-r from-green-950 via-slate-900 to-blue-950 px-4 py-1.5 text-xs text-slate-300 border-b border-green-500/20">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <span className="flex h-2 w-2 rounded-full bg-green-400 animate-ping"></span>
-            <span className="font-medium text-green-300">Fast Dispatch Available</span>
-            <span className="hidden md:inline text-slate-400">| Free Shipping on orders over KSh 150</span>
-          </div>
           <div className="flex items-center space-x-4">
             {SHOP_ENABLED && (
               <div className="flex items-center space-x-1.5 bg-slate-800/80 rounded-full px-2.5 py-0.5 border border-slate-700">

@@ -68,6 +68,13 @@ const categories: Record<CategoryKey, Category> = {
   },
 };
 
+// Label + placeholder for the account number field, tailored per utility type
+const utilityAccountFieldConfig: Record<UtilityType, { label: string; placeholder: string }> = {
+  electricity: { label: 'KPLC Meter Number', placeholder: 'e.g. 12345678901' },
+  water: { label: 'Water Account Number', placeholder: 'e.g. WTR-004521' },
+  other: { label: 'Account / Reference Number', placeholder: 'e.g. account or reference number' },
+};
+
 export const Services: React.FC = () => {
   const { config, showToast } = useCart();
 
@@ -75,6 +82,7 @@ export const Services: React.FC = () => {
   const [selectedOffer, setSelectedOffer] = useState<Offer | null>(null);
 
   const [utility, setUtility] = useState<UtilityType>('electricity');
+  const [utilityAccountNumber, setUtilityAccountNumber] = useState('');
   const [utilityAmount, setUtilityAmount] = useState('');
   const [airtelAmount, setAirtelAmount] = useState('');
 
@@ -110,11 +118,15 @@ export const Services: React.FC = () => {
   };
 
   const handleUtilityConfirm = () => {
+    if (!utilityAccountNumber.trim()) {
+      showToast(`Please enter your ${utilityAccountFieldConfig[utility].label.toLowerCase()}.`);
+      return;
+    }
     if (!utilityAmount || Number(utilityAmount) <= 0) {
       showToast('Please enter the amount you wish to pay.');
       return;
     }
-    const message = `Utility Bill Payment Request\nUtility: ${utilityLabels[utility]}\nAmount Paid: KSh ${utilityAmount}\nTill Number Used: ${SAFARICOM_TILL}\n\nHi, I've just sent KSh ${utilityAmount} to Till ${SAFARICOM_TILL} for my ${utilityLabels[utility]} payment. Please process it and send me my token/confirmation. Thank you!`;
+    const message = `Utility Bill Payment Request\nUtility: ${utilityLabels[utility]}\n${utilityAccountFieldConfig[utility].label}: ${utilityAccountNumber}\nAmount Paid: KSh ${utilityAmount}\nTill Number Used: ${SAFARICOM_TILL}\n\nHi, I've just sent KSh ${utilityAmount} to Till ${SAFARICOM_TILL} for my ${utilityLabels[utility]} payment (${utilityAccountFieldConfig[utility].label}: ${utilityAccountNumber}). Please process it and send me my token/confirmation. Thank you!`;
     openWhatsAppConfirmation(message);
   };
 
@@ -289,13 +301,29 @@ export const Services: React.FC = () => {
             <label className="block text-slate-300 font-semibold mb-1 text-xs">Select Utility Type</label>
             <select
               value={utility}
-              onChange={(e) => setUtility(e.target.value as UtilityType)}
+              onChange={(e) => {
+                setUtility(e.target.value as UtilityType);
+                setUtilityAccountNumber('');
+              }}
               className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500"
             >
               <option value="electricity">Electricity (KPLC Tokens)</option>
               <option value="water">Water Bill</option>
               <option value="other">Other Utility</option>
             </select>
+          </div>
+
+          <div>
+            <label className="block text-slate-300 font-semibold mb-1 text-xs">
+              {utilityAccountFieldConfig[utility].label}
+            </label>
+            <input
+              type="text"
+              placeholder={utilityAccountFieldConfig[utility].placeholder}
+              value={utilityAccountNumber}
+              onChange={(e) => setUtilityAccountNumber(e.target.value)}
+              className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500"
+            />
           </div>
 
           <div className="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-1.5 text-xs">
