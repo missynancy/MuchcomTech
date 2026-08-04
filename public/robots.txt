@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://missynancy.github.io/MuchcomTech/sitemap.xml
